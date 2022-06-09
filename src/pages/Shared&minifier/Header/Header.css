@@ -1,0 +1,46 @@
+.title-font{
+  font-family: 'Dancing Script', cursive;
+}
+.header-options{
+  font-family: 'Caveat', cursive;
+}
+.showNav{
+  transition: 0.5s linear;
+}
+.hideNav{
+  position: fixed;
+  left: -200vh;
+  transition: 0.5s linear;
+}
+.showTopNav{
+  width: 100%;
+  transition: 0.5s linear;
+}
+.hideTopNav{
+  position: fixed;
+  left: -300vh;
+  transition: 0.5s linear;
+}
+
+.hideIconsDesk{
+  position: fixed;
+  right: -150px;
+  transition: 0.4s linear;
+}
+.showIconsDesk{
+  transition: 0.4s linear;
+  position: fixed;
+  right: 0.5rem;
+  transition: 0.4s linear;
+}
+.hideIconsSm{
+  position: fixed;
+  bottom: -150px;
+  transition: 0.4s linear;
+}
+.showIconsSm{
+  transition: 0.4s linear;
+  position: fixed;
+  bottom: 1.5rem;
+  transition: 0.4s linear;
+}
