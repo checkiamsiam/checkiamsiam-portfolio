@@ -11,7 +11,7 @@ const Projects = () => {
   const [visible3, setVisible3] = useState(false)
   return (
     <div className='py-10 container mx-auto px-5 '>
-      <h1 className='text-primary text-4xl title-font text-center mb-5'>Featured Projects</h1>
+      <h1 className='text-accent text-4xl title-font text-center mb-5'>Featured Projects</h1>
       <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'>
         <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
           <figure onMouseMove={() => setVisible1(true)} onMouseOut={() => setVisible1(false)} class="mx-3 mt-3 cursor-pointer relative">
