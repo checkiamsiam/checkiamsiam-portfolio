@@ -59,9 +59,9 @@ const ContactSection = () => {
            <h1 className=' my-5 text-accent'>SOCIAL-</h1>
            <div>
            <div className='flex justify-center text-base-100 gap-3'>
-            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 ' href=""><FaFacebookF/></a>
-            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 ' href=""><BsTwitter/></a>
-            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 ' href=""><AiFillInstagram/></a>
+            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 text-primary hover:text-accent' href=""><FaFacebookF/></a>
+            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 text-primary hover:text-accent' href=""><BsTwitter/></a>
+            <a className='text-xl p-3 bg-neutral rounded-full hover:bg-primary hover:-translate-y-2 transition duration-500 text-primary hover:text-accent' href=""><AiFillInstagram/></a>
            
           </div>
            </div>

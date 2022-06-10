@@ -8,13 +8,13 @@ const Banner = () => {
   return (
     <div className='bg-banner h-screen -z-30 bg-no-repeat bg-center bg-cover flex items-center md:items-end md:pb-20'>
       <div className='container mx-auto '>
-        <div className='-z-20 header-options  md:px-0 px-5'>
+        <div className='-z-20   md:px-0 px-5'>
 
           <div>
-            <h1 className='md:text-2xl text-xl text-base-100'>- I'm</h1>
-            <h1 className='md:text-4xl text-2xl text-primary'>Sheikh Shahariar Siam</h1>
+            <h1 className='md:text-6xl text-3xl text-base-100 title-font'>Welcome Here</h1>
+            <h1 className='md:text-6xl text-3xl text-primary mt-5'>My Self Siam</h1>
             <div className='md:block hidden mt-5 text-base-100'>
-              <div style={{ fontSize: '2.25rem', lineHeight: '2.5rem', width: '100%', }}> <TypeAnimation
+              <div style={{ fontSize: '2.25rem', lineHeight: '2.5rem', width: '100%', }}>-I'm A <TypeAnimation
                 cursor={true}
                 sequence={[
                   'Junior Web Developer',
@@ -25,6 +25,7 @@ const Banner = () => {
                   2000,
                 ]}
                 repeat={Infinity}
+                className='inline-block'
               />
               </div>
             </div>
@@ -43,7 +44,7 @@ const Banner = () => {
               /></div>
             </div>
             <div className='lg:w-1/2 md:mt-5 mt-2'>
-              <p className='md:text-2xl text-xl text-base-100'>From the beginning of my web development career, always i was serious to coding and i'm a self learner who enjoy to analysis any new thing. </p>
+              <p className='md:text-2xl text-xl text-base-100 capitalize'>'Coding' is the most favorite Word of my life. i'm a self learner who enjoy to analysis any new thing. </p>
             </div>
             <div>
               <a target='_blank' class="dedcription-btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">

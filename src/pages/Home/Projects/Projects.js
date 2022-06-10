@@ -60,7 +60,7 @@ const Projects = () => {
         </div>
       </div>
       <div className='flex justify-center'>
-        <Link className='custom-btn m-5' to=''>See More</Link>
+        <Link className='custom-btn m-5' to='/projects'>See More</Link>
       </div>
     </div>
   );

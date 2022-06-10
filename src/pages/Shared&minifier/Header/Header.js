@@ -31,7 +31,7 @@ const Header = () => {
             <div className='sm:block hidden'>
               <ul class="flex gap-5 text-md italic ">
                 <li className='  header-options text-base-100'><NavLink className='hover:text-primary transition duration-300' to='/'>Home</NavLink></li>
-                <li className='header-options text-base-100'><NavLink className='hover:text-primary transition duration-300' to='/about'>About Me</NavLink></li>
+                <li className='header-options text-base-100'><NavLink className='hover:text-primary transition duration-300' to='/about'>About</NavLink></li>
                 <li className='header-options text-base-100'><NavLink className=' hover:text-primary transition duration-300' to='/portfolio'>Portfolio</NavLink></li>
                 <li className='header-options text-base-100'><NavLink  className='hover:text-primary transition duration-300' to='/projects'>Projects</NavLink></li>
                 <li className='header-options text-base-100'><NavLink  className=' hover:text-primary transition duration-300' to='/blogs'>Blogs</NavLink></li>
@@ -63,23 +63,23 @@ const Header = () => {
       </div>
       <div className={`fixed bottom-5 right-2 z-50 sm:block hidden hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'}  `}>
         <div className='flex  flex-col gap-3 z-50 text-base-100'>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary transition duration-500 ' to='/'><AiFillHome /></NavLink>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary  transition duration-500' to='/about'><SiAboutdotme /></NavLink>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/portfolio'><RiProfileFill /></NavLink>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/projects'><AiFillProject /></NavLink>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/blogs'><BiMessageSquareDetail /></NavLink>
-          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/contact'><MdContactMail /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 ' to='/'><AiFillHome /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent  transition duration-500' to='/about'><SiAboutdotme /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500' to='/portfolio'><RiProfileFill /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500' to='/projects'><AiFillProject /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent  transition duration-500' to='/blogs'><BiMessageSquareDetail /></NavLink>
+          <NavLink className='text-2xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500' to='/contact'><MdContactMail /></NavLink>
         </div>
       </div>
       <div className='flex justify-center '>
         <div className={`fixed bottom-5   sm:hidden  hideIconsSm ${(show && !isOpen) && 'showIconsSm'}  z-50`}>
           <div className='flex flex-wrap text-base-100 gap-2 '>
-            <NavLink className=' text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500 ' to='/'><AiFillHome /></NavLink>
-            <NavLink className='text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/about'><SiAboutdotme /></NavLink>
-            <NavLink className='text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/portfolio'><RiProfileFill /></NavLink>
-            <NavLink className='text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/projects'><AiFillProject /></NavLink>
-            <NavLink className='text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/blogs'><BiMessageSquareDetail /></NavLink>
-            <NavLink className='text-xl p-2 bg-neutral rounded-full hover:bg-primary transition duration-500' to='/contact'><MdContactMail /></NavLink>
+            <NavLink className=' text-xl p-2 bg-neutral rounded-full  transition duration-500 ' to='/'><AiFillHome /></NavLink>
+            <NavLink className='text-xl p-2 bg-neutral rounded-full  transition duration-500' to='/about'><SiAboutdotme /></NavLink>
+            <NavLink className='text-xl p-2 bg-neutral rounded-full  transition duration-500' to='/portfolio'><RiProfileFill /></NavLink>
+            <NavLink className='text-xl p-2 bg-neutral rounded-full transition duration-500' to='/projects'><AiFillProject /></NavLink>
+            <NavLink className='text-xl p-2 bg-neutral rounded-full transition duration-500' to='/blogs'><BiMessageSquareDetail /></NavLink>
+            <NavLink className='text-xl p-2 bg-neutral rounded-full transition duration-500' to='/contact'><MdContactMail /></NavLink>
           </div>
         </div>
       </div>

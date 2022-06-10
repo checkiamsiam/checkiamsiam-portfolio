@@ -12,7 +12,7 @@
 }
 .hideNav{
   position: fixed;
-  left: -200vh;
+  left: -250vh;
   transition: 0.5s linear;
 }
 .showTopNav{

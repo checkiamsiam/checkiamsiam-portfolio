@@ -1,9 +1,13 @@
 import React from 'react';
+import AboutBanner from './Banner/AboutBanner';
+import MySkill from './MySkills/MySkill';
 
 const AboutMe = () => {
   return (
-    <div className='text-accent h-screen flex justify-center items-center'>
-      <h1 className='md:text-6xl text-3xl'>Coming Soon(about me)</h1>
+    <div>
+     <AboutBanner/>
+     <hr className='mx-[25%] '/>
+     <MySkill/>
     </div>
   );
 };
