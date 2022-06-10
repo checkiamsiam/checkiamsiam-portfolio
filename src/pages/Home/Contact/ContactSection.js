@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { BiSend } from "react-icons/bi";
+import TypeAnimation from 'react-type-animation';
 import { MdEmail } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa";
@@ -22,10 +23,21 @@ const ContactSection = () => {
       });
   };
   return (
+    
     <div className='py-10 container mx-auto px-5'>
       <h1 className='text-accent text-3xl title-font text-center mb-5'>Feel Free To Me</h1>
-      <h1 className='text-base-100 text-5xl title-font text-center mb-10'>Get In <span className='text-primary'>Touch</span></h1>
-      <div className='md:flex justify-between md:px-14'>
+      <h1 className='text-base-100 text-5xl title-font  mb-10'>Get <TypeAnimation
+                cursor={true}
+                sequence={[
+                  'Me ?',
+                  3000,
+                  'In Touch',
+                  3000,
+                ]}
+                className='inline text-primary mb-5'
+                repeat={Infinity}
+              /></h1>
+      <div className='md:flex justify-between md:px-14 '>
         <div className='flex flex-col justify-center items-center'>
           <div className='mb-10'>
            <div className='flex gap-1 items-center mb-3'>

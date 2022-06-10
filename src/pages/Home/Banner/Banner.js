@@ -25,7 +25,8 @@ const Banner = () => {
                   2000,
                 ]}
                 repeat={Infinity}
-              /></div>
+              />
+              </div>
             </div>
             <div className='md:hidden block  text-base-100'>
               <div style={{ fontSize: '1.5rem', lineHeight: '2', width: '100%', }}> <TypeAnimation
