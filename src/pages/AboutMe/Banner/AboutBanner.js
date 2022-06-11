@@ -6,7 +6,7 @@ import TypeAnimation from 'react-type-animation';
 const AboutBanner = () => {
   return (
     <div>
-      <div className=' min-h-screen  pt-24 pb-5 '>
+      <div className='  pt-24 pb-5 '>
         <div className='container  mx-auto text-base-100 px-5'>
           <h1 className=' text-center mb-10 '><span className='text-accent text-4xl title-font about-title relative z-30'>ABOUT ME</span></h1>
           <div className='flex lg:flex-row flex-col  gap-10'>
@@ -15,14 +15,16 @@ const AboutBanner = () => {
                 <h1 className='md:text-2xl text-xl text-base-100 mb-3'>- Hey,</h1>
 
                 <h1 className='text-base-100 text-5xl title-font'>Wanna <TypeAnimation
-                  cursor={false}
-                  sequence={[
-                    'Know About Me ?',
-                    2000,
-                  ]}
-                  className='inline text-primary mb-5'
-                  repeat={Infinity}
-                /></h1>
+                cursor={false}
+                sequence={[
+                  'Know About me?',
+                  2000,
+                  'Judge Me?',
+                  2000,
+                ]}
+                repeat={Infinity} 
+                className = 'inline text-primary'
+              /></h1>
                 <div className=' md:mt-5 mt-2'>
                   <p className='md:text-2xl text-xl text-base-100 capitalize'>i am a junior react js front end web developer. programing is the most enjoyable thing of my life. <br />
                   ~ Self Learner<br />

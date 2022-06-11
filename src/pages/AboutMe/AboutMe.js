@@ -8,6 +8,7 @@ const AboutMe = () => {
      <AboutBanner/>
      <hr className='mx-[25%] '/>
      <MySkill/>
+     <hr className='mx-[25%] '/>
     </div>
   );
 };
