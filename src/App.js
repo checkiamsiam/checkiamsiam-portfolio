@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Projects from './pages/Projects/Projects';
+import Footer from './pages/Shared&minifier/Footer/Footer';
 import Header from './pages/Shared&minifier/Header/Header';
 import ScrollTopOnRouteChange from './pages/Shared&minifier/ScroolTopOnRouteChange/RouteChangeFromTop';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
+      <Footer/>
       <ScrollTopOnRouteChange />
     </div>
   );

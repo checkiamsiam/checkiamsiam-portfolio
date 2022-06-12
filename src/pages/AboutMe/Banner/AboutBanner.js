@@ -32,34 +32,30 @@ const AboutBanner = () => {
                   ~ Lucky at Attempts<br />
                    </p>
                 </div>
-
-              </div>
-            </div>
-            <div className='lg:w-1/2 flex items-center justify-center'>
-              <div className='w-full'>
-                <h1 className='font-bold text-3xl mb-5 text-primary'>PERSONAL INFO</h1>
-                <div className='sm:flex gap-10 text-lg'>
-                  <div className=''>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>First Name :</span>  Sheikh Shahariar</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Last Name :</span>  Siam</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Age : </span> 19</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Gender : </span>Male</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Nationality : </span>Bangladeshi</p>
-                  </div>
-                  <div className=''>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Present Adress :</span> Dhaka</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Permanent Adress  :</span> Prirojpur</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Occupation : </span>Web Developer</p>
-                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Interest :</span> Programing</p>
-                    <p className='mb-5'><span className='font-semibold border-b-2 border-primary'>WhatsApp :</span> +8801910072661</p>
-                  </div>
-                </div>
                 <div>
                   <a target='_blank' class="dedcription-btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">
                     <span class="name-descripeion">Download Resume</span>
                     <BiCloudDownload class="btn-icon" />
                   </a>
                 </div>
+              </div>
+            </div>
+            <div className='lg:w-1/2 flex items-center justify-center'>
+              <div className=' flex flex-col justify-center'>
+                <h1 className='font-bold text-3xl mb-5 text-primary'>PERSONAL INFO</h1>
+                <div className='text-lg '>
+                 
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Name :</span>  Sheikh Shahariar Siam</p>
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Age : </span> 19</p>
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Gender : </span>Male</p>
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Nationality : </span>Bangladeshi</p>
+                
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Present Adress :</span> Dhaka</p>
+                    <p className='mb-3'><span className='font-semibold border-b-2 border-primary'>Occupation : </span>Web Developer</p>
+                    <p className='mb-5'><span className='font-semibold border-b-2 border-primary'>WhatsApp :</span> +8801910072661</p>
+                  
+                </div>
+               
               </div>
             </div>
           </div>
