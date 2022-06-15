@@ -12,7 +12,7 @@ const Banner = () => {
 
           <div>
             <h1 className='md:text-6xl text-3xl text-base-100 title-font'>Welcome Here</h1>
-            <h1 className='md:text-6xl text-3xl text-primary mt-5'>My Self Siam</h1>
+            <h1 className='md:text-6xl text-3xl text-primary mt-5'>I'm Siam</h1>
             <div className='md:block hidden mt-5 text-base-100'>
               <div style={{ fontSize: '2.25rem', lineHeight: '2.5rem', width: '100%', }}>-I'm A <TypeAnimation
                 cursor={true}

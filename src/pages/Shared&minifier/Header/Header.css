@@ -17,12 +17,12 @@
 }
 .showTopNav{
   width: 100%;
-  transition: 0.5s linear;
+  transition: 0.8s linear;
 }
 .hideTopNav{
   position: fixed;
   left: -300vh;
-  transition: 0.5s linear;
+  transition: 1s linear;
 }
 
 .hideIconsDesk{

@@ -1,0 +1,28 @@
+
+.project-title::after{
+  font-family: 'Courier New', Courier, monospace;
+  content: 'PROJECTS';
+  color: #222222;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-title::after{
+    display: none;
+  }
+  .project-title{
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #F27F1E;
+  }
+}
