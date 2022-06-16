@@ -1,6 +1,8 @@
 import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { projectFour, projectOne, projectThree, projectTwo } from './FakeData/All Project/AllProject';
+import { featuredProjectOne, featuredProjectThree, featuredProjectTwo } from './FakeData/FeaturedProjects/FeaturedProjects';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Blogs from './pages/Blogs/Blogs';
 import Contact from './pages/Contact/Contact';
@@ -15,9 +17,12 @@ import ScrollTopOnRouteChange from './pages/Shared&minifier/ScroolTopOnRouteChan
 const ActiveNavContext = createContext();
 function App() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const projects = [featuredProjectThree, featuredProjectTwo , featuredProjectOne , projectOne, projectTwo, projectThree, projectFour];
+  const [showing, setShowing] = useState(projects)
+  const featured = projects.filter(project => project.featured === true).reverse()
   return (
     <div>
-      <ActiveNavContext.Provider value={[activeCategory, setActiveCategory]}>
+      <ActiveNavContext.Provider value={{activeCategory, setActiveCategory , projects ,  showing , setShowing , featured}}>
         <Header></Header>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>

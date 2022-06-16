@@ -10,6 +10,7 @@ gitRepoServer : 'https://github.com/checkiamsiam/bycycle-soul-server' ,
 detailsRoute : 'bycyle-soul', 
 featured : true ,
 category : 'org',
+technologyUsed : ['React Js' , 'Express Js']
 }
 export const  featuredProjectTwo = {
   name : 'Health Cure',

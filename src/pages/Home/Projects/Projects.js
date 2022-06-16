@@ -5,7 +5,7 @@ import { featuredProjectOne, featuredProjectTwo, featuredProjectThree } from '..
 import { ActiveNavContext } from '../../../App';
 
 const Projects = () => {
-  const [activeCategory , setActiveCategory] = useContext(ActiveNavContext);
+  const {setActiveCategory , setShowing , featured} = useContext(ActiveNavContext);
   const [visible1, setVisible1] = useState(false)
   const [visible2, setVisible2] = useState(false)
   const [visible3, setVisible3] = useState(false)
@@ -69,7 +69,10 @@ const Projects = () => {
         </div>
       </div>
       <div className='flex justify-center'>
-        <Link onClick={()=> setActiveCategory('feature')} className='custom-btn m-5' to='/projects'>See More</Link>
+        <Link onClick={()=> {
+          setActiveCategory('feature')
+          setShowing(featured)
+          }} className='custom-btn m-5' to='/projects'>See More</Link>
       </div>
     </div>
   );
