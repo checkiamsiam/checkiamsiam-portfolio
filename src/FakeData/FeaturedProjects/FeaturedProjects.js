@@ -10,7 +10,7 @@ gitRepoServer : 'https://github.com/checkiamsiam/bycycle-soul-server' ,
 detailsRoute : 'bycyle-soul', 
 featured : true ,
 category : 'org',
-technologyUsed : ['React Js' , 'Express Js']
+technologyUsed : ['React Js' , 'Express Js' , 'MongoDB'] ,
 }
 export const  featuredProjectTwo = {
   name : 'Health Cure',
@@ -22,6 +22,7 @@ export const  featuredProjectTwo = {
   detailsRoute : 'health-cure',
   featured : true ,
   category : 'org',
+  technologyUsed : ['React Js' , 'Express Js' , 'MongoDB'] ,
 }
 export const  featuredProjectThree = {
   name : 'Phone Factor',
@@ -33,4 +34,5 @@ export const  featuredProjectThree = {
   detailsRoute : 'phone-factor', 
   featured : true ,
   category : 'org',
+  technologyUsed : ['React Js' , 'Express Js' , 'MongoDB'] ,
 }

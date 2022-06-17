@@ -1,3 +1,5 @@
+
+
 export const  projectOne = {
   name : 'Take Tutor',
   description : 'A website for independent service provider, an teacher are showing his services for students',
@@ -8,6 +10,7 @@ export const  projectOne = {
   detailsRoute : 'take-tutor', 
   featured : false ,
   category : 'personal',
+  technologyUsed : ['React Js' , 'Tailwind Css'] ,
   }
 export const  projectTwo = {
   name : 'Amazon Clone',
@@ -19,6 +22,7 @@ export const  projectTwo = {
   detailsRoute : 'amazon', 
   featured : false ,
   category : 'org',
+  technologyUsed : ['React Js' , 'Vanilla Css'] ,
   }
 export const  projectThree = {
   name : 'Movie Review(RRR)',
@@ -30,6 +34,7 @@ export const  projectThree = {
   detailsRoute : 'rrr-review', 
   featured : false ,
   category : 'all',
+  technologyUsed : ['React Js' , 'Tailwind Css'] ,
   }
 export const  projectFour = {
   name : 'Bibaho Bonton',
@@ -41,4 +46,5 @@ export const  projectFour = {
   detailsRoute : 'bibaho-bonton', 
   featured : false ,
   category : 'all',
+  technologyUsed : ['Html'  , 'Bootstrap Css'] ,
   }

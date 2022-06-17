@@ -8,12 +8,12 @@
   font-family: 'Caveat', cursive;
 }
 .showNav{
-  transition: 0.5s linear;
+  transition: 0.3s linear;
 }
 .hideNav{
   position: fixed;
   left: -250vh;
-  transition: 0.5s linear;
+  transition: 0.3s linear;
 }
 .showTopNav{
   width: 100%;

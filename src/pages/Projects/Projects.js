@@ -1,32 +1,62 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
 import './project.css'
 
 const Projects = () => {
   const { activeCategory, setActiveCategory, projects, showing, setShowing, featured } = useContext(ActiveNavContext);
+  const [showAll, setShowAll] = useState(false)
   const org = projects.filter(project => project.category === 'org')
   const personal = projects.filter(project => project.category === 'personal')
   const social = projects.filter(project => project.category === 'social')
   const handleAllProjectNav = () => {
     setActiveCategory('all')
     setShowing(projects)
+    setShowAll(false)
   }
   const handleFeaturedProjectNav = () => {
     setActiveCategory('feature')
     setShowing(featured)
+    setShowAll(false)
   }
   const handleOrgProjectNav = () => {
     setActiveCategory('Org')
     setShowing(org)
+    setShowAll(false)
   }
   const handlePersonalProjectNav = () => {
     setActiveCategory('personal')
     setShowing(personal)
+    setShowAll(false)
   }
   const handleSocialProjectNav = () => {
     setActiveCategory('social')
     setShowing(social)
+    setShowAll(false)
+  }
+  const goNext = () => {
+    setShowAll(!showAll)
+    window.scrollTo(0, 0)
+    if (activeCategory === 'all') {
+      setActiveCategory('feature')
+      setShowing(featured)
+    }
+    if (activeCategory === 'feature') {
+      setActiveCategory('Org')
+      setShowing(org)
+    }
+    if (activeCategory === 'org') {
+      setActiveCategory('personal')
+      setShowing(personal)
+    }
+    if (activeCategory === 'personal') {
+      setActiveCategory('social')
+      setShowing(social)
+    }
+    if (activeCategory === 'social') {
+      setActiveCategory('all')
+      setShowing(projects)
+    }
   }
 
   return (
@@ -43,25 +73,64 @@ const Projects = () => {
             <button onClick={handleSocialProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'social' ? 'border-primary' : 'border-neutral'}`}>Social</button>
           </div>
         </div>
-        <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
-          {showing.map(project =>
-            <div>
-              <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
-                <figure class="mx-3 mt-3 cursor-pointer">
-                  <img src={project.img} alt="Bycycle-site" class="rounded-xl md:h-52" />
+        {showing.length !== 0 ? <div>
+          {!showAll ? <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
+            {showing.slice(0, 6).map(project =>
+              <div>
+                <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
+                  <figure class="mx-3 mt-3 cursor-pointer">
+                    <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52" />
 
-                </figure>
-                <div class="card-body text-base-100">
-                  <h2 class="card-title text-primary">{project.name}</h2>
-                  <div className='text-right '>
-                    <Link to={`project/${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+                  </figure>
+                  <div class="card-body text-base-100">
+                    <h2 class="card-title text-primary">{project.name}</h2>
+                    <div className='flex gap-3 pb-3'>
+                    {project.technologyUsed.slice(0,3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
+                    </div>
+                    <div className='text-right '>
+                      <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div> :
+            <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
+              {showing.map(project =>
+                <div>
+                  <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
+                    <figure class="mx-3 mt-3 cursor-pointer">
+                      <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52" />
+
+                    </figure>
+                    <div class="card-body text-base-100">
+                      <h2 class="card-title text-primary">{project.name}</h2>
+                      <div className='flex gap-3 pb-3'>
+                    {project.technologyUsed.slice(0,3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
+                    </div>
+                      <div className='text-right '>
+                        <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>}
+        </div> : 
+       
+          <h1 className='text-error text-6xl text-center py-10'>Empty</h1>
+       
+        }
       </div>
+      {(!showAll && showing.length !== 0) ? <div className='flex justify-center'>
+        <button onClick={() => {
+          setShowAll(!showAll)
+        }} className='custom-btn m-5'>Show All</button>
+      </div> :
+        <div className='flex justify-center'>
+          <button onClick={goNext} className='custom-btn m-5'>Next</button>
+        </div>
+      }
     </div>
   );
 };
