@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
+import {Helmet} from "react-helmet";
 import './project.css'
+import '../Home/Projects/project.css'
 
 const Projects = () => {
   const { activeCategory, setActiveCategory, projects, showing, setShowing, featured } = useContext(ActiveNavContext);
@@ -61,6 +63,9 @@ const Projects = () => {
 
   return (
     <div className='pt-24 pb-5 min-h-screen'>
+      <Helmet>
+        <title>Projects - Sheikh Shahariar Siam</title>
+      </Helmet>
       <div className='container  mx-auto text-base-100 px-5 '>
         <h1 className=' text-center sm:mb-10 mb-5 '><span className='text-accent text-4xl title-font project-title relative z-30'>My Projects</span></h1>
         <p className='text-center italic text-primary'>All Of My Projects Showcased here</p>
