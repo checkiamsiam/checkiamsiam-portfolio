@@ -65,7 +65,7 @@ const ContactSection = () => {
 
               <div>
                 <h1 className='text-accent'>CALL ME</h1>
-                <h1 className='text-base-100'>+801910072661</h1>
+                <h1 className='text-base-100 font-mono'>+8801910072661</h1>
               </div>
             </div>
             <h1 className=' my-5 text-accent'>SOCIAL-</h1>

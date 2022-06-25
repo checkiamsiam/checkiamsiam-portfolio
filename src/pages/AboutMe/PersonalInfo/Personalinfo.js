@@ -1,9 +1,10 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { TiInfoLargeOutline } from 'react-icons/ti'
 const PersonalInfo = () => {
   return (
     <div className='py-10  container mx-auto'>
-      <h1 className=' text-center mb-10 '><span className='text-accent text-4xl title-font '>PERSONAL INFO</span></h1>
+      <h1 className=' text-center mb-10 flex justify-center text-primary'><span className='text-accent text-4xl title-font '>PERSONAL INFO</span><TiInfoLargeOutline/></h1>
       <div className='lg:flex gap-5'>
 
         <div className='flex justify-center items-center lg:w-1/2'>
@@ -14,7 +15,7 @@ const PersonalInfo = () => {
           >
           </Player>
         </div>
-        <div className='px-5 lg:w-1/2 flex justify-center'>
+        <div className='px-5 lg:w-1/2 flex justify-start lg:justify-center'>
           <div>
             <div className='sm:text-lg text-md text-base-100'>
 

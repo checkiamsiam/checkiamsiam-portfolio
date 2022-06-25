@@ -34,10 +34,10 @@ const MySkill = () => {
             </Player>
            </div>
             <div className='text-2xl h-44 w-80 md:h-44 md:w-96 border-[16px] border-primary rounded-full flex justify-evenly items-center'>
-            <div className='text-xl p-2 bg-neutral rounded-full text-[#DD4B25]'><AiFillHtml5 className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-[#254BDD]'><FaCss3Alt className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-[goldenrod]'><IoLogoJavascript className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-green-700'><IoLogoNodejs className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-[#DD4B25] shadow-md shadow-[#DD4B25] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><AiFillHtml5 className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-[#254BDD] shadow-md shadow-[#254BDD] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><FaCss3Alt className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-[goldenrod] shadow-md shadow-[goldenrod]  hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><IoLogoJavascript className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-green-700 shadow-md shadow-green-700 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><IoLogoNodejs className='text-4xl'/></div>
             </div>
           </div>
 
@@ -53,10 +53,10 @@ const MySkill = () => {
             </Player>
            </div>
             <div className='text-2xl h-44 w-80 md:h-44 md:w-96 border-[16px] border-primary rounded-full flex justify-evenly items-center'>
-            <div className='text-xl p-2 bg-neutral rounded-full text-sky-400'><FaReact className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full '><SiExpress className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-sky-400'><SiTailwindcss className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-[#6D11EE]'><FaBootstrap className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-sky-400 shadow-md shadow-sky-700 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><FaReact className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full shadow-md shadow-white  hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiExpress className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-sky-400 shadow-md shadow-sky-400 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiTailwindcss className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-[#6D11EE] shadow-md shadow-[#6D11EE] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><FaBootstrap className='text-4xl'/></div>
             </div>
           </div>
 
@@ -72,10 +72,10 @@ const MySkill = () => {
             </Player>
            </div>
             <div className='text-2xl h-44 w-80 md:h-44 md:w-96 border-[16px] border-primary rounded-full flex justify-evenly items-center'>
-            <div className='text-xl p-2 bg-neutral rounded-full text-yellow-400'><SiFirebase className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-green-600'><SiMongodb className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-black'><BsGithub className='text-4xl'/></div>
-            <div className='text-xl p-2 bg-neutral rounded-full text-[#31B0B6]'><SiNetlify className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-yellow-400 shadow-md shadow-yellow-400  hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiFirebase className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-green-600 shadow-md shadow-green-600  hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiMongodb className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-black shadow-md shadow-red-200 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><BsGithub className='text-4xl'/></div>
+            <div className='text-xl p-2 bg-neutral rounded-full text-[#31B0B6] shadow-md shadow-[#31B0B6] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiNetlify className='text-4xl'/></div>
             </div>
           </div>
         </div>
