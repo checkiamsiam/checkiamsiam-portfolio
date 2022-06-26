@@ -1,0 +1,29 @@
+
+.Contact-title::after{
+  font-family: 'Courier New', Courier, monospace;
+  content: 'CONTACT';
+  color: #222222;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.8;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  font-size: 7rem;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  .Contact-title::after{
+    font-size: 4rem;
+    display: none;
+  }
+  .Contact-title{
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #F27F1E;
+  }
+}

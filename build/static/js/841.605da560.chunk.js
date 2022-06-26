@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_of_checkiamsiam=self.webpackChunkportfolio_of_checkiamsiam||[]).push([[841],{9841:function(e,i,s){s.r(i);s(2791);var t=s(4270),c=s(184);i.default=function(){return(0,c.jsxs)("div",{className:"text-accent h-screen flex justify-center items-center",children:[(0,c.jsx)(t.q,{children:(0,c.jsx)("title",{children:"Blogs - Sheikh Shahariar Siam"})}),(0,c.jsx)("h1",{className:"md:text-6xl text-3xl",children:"Coming Soon(blogs)"})]})}}}]);
+//# sourceMappingURL=841.605da560.chunk.js.map

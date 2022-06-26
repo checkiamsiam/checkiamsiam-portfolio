@@ -7,7 +7,7 @@ const Education = () => {
     <div className='container mx-auto py-10   px-5'>
       <h1 className=' text-center   '><span className='text-accent text-4xl title-font flex md:gap-3 justify-center'><FaGraduationCap /> Educational & Courses</span></h1>
       <div className='lg:flex'>
-        <div className='lg:w-1/2'>
+        <div className='lg:w-1/2 '>
           <Player
             autoplay
             loop
@@ -16,7 +16,7 @@ const Education = () => {
           >
           </Player>
         </div>
-        <div className='text-base-100 flex flex-col gap-5 justify-evenly items-center lg:w-1/2'>
+        <div className='text-base-100 flex flex-col gap-5 justify-evenly items-center lg:w-1/2 lg:p-10'>
           <div className='w-full'>
             <h1 className='text-3xl text-primary'>Education:</h1>
             <h1 className='text-right sm:text-xl'>2020 - still running</h1>

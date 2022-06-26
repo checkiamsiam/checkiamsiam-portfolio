@@ -1,6 +1,4 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { BiSend } from "react-icons/bi";
+import React from 'react';
 import TypeAnimation from 'react-type-animation';
 import { MdEmail } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -8,28 +6,17 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
 import { Player } from '@lottiefiles/react-lottie-player';
+import ContactForm from '../../Shared&minifier/ContactForm/ContactForm';
 
 const ContactSection = () => {
-  const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_0o8844l', 'template_u2g9ofm', form.current, 'llUopf-9itfABWZ3z')
-      .then((result) => {
-        alert('message sent');
-        e.target.reset()
-      }, (error) => {
-        alert('error');
-      });
-  };
   return (
 
     <div className='py-10 container mx-auto px-5'>
       <div className='flex justify-center relative'>
-      <h1 className='text-accent text-3xl title-font text-center'>Feel Free To Me</h1>
-      
-      <Player
+        <h1 className='text-accent text-3xl title-font text-center'>Feel Free To Me</h1>
+
+        <Player
           autoplay
           loop
           src="https://assets5.lottiefiles.com/private_files/lf30_dmdqjt1y.json"
@@ -49,8 +36,8 @@ const ContactSection = () => {
         repeat={Infinity}
       />
       </h1>
-      <div className='md:flex justify-between md:px-14 '>
-        <div className='flex flex-col justify-center items-center'>
+      <div className='xl:flex justify-between md:px-14 '>
+        <div className='flex flex-col gap-5 justify-center items-center'>
           <div className='mb-10'>
             <div className='flex gap-1 items-center mb-3'>
               <MdEmail className='text-6xl text-primary w-20' />
@@ -81,22 +68,8 @@ const ContactSection = () => {
           </div>
         </div>
         <div>
-          <form ref={form} onSubmit={sendEmail}>
-            <div className='flex md:flex-row flex-col gap-5 mb-5'>
-              <input name='name' type="text" placeholder="YOUR NAME" class="input bg-neutral w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
-              <input name='email' type="text" placeholder="EMAIL" class="input bg-neutral  w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
-              <input name='subject' type="text" placeholder="SUBJECT" class="input bg-neutral focus:outline-primary focus:outline-1 w-full rounded-full text-base-100 " />
-            </div>
-            <div>
-              <textarea name='message' class="textarea w-full h-32 bg-neutral text-base-100  focus:outline-primary focus:outline-1 rounded-2xl" placeholder="MESSAGE"></textarea>
-            </div>
-            <div>
-              <button type='submit' class="dedcription-btn">
-                <span class="name-descripeion">Send Message</span>
-                <BiSend class="btn-icon" />
-              </button>
-            </div>
-          </form>
+          <h1 className='text-center text-primary text-3xl pb-5 xl:hidden'>Message</h1>
+          <ContactForm />
         </div>
       </div>
     </div>

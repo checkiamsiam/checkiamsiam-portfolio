@@ -1,13 +1,16 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import ContactBanner from './Banner/Banner';
+import DirectMessage from './DirectMessage/DirectMessage';
 
 const Contact = () => {
   return (
-    <div className='text-accent h-screen flex justify-center items-center'>
+    <div className='container mx-auto'>
       <Helmet>
         <title>Contact - Sheikh Shahariar Siam</title>
       </Helmet>
-      <h1 className='sm:text-6xl text-3xl'>Coming Soon(contact)</h1>
+      <ContactBanner></ContactBanner>
+      <DirectMessage/>
     </div>
   );
 };

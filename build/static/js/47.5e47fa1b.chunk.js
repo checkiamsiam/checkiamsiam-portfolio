@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_of_checkiamsiam=self.webpackChunkportfolio_of_checkiamsiam||[]).push([[47],{2047:function(e,t,c){c.r(t);c(2791);var i=c(4270),s=c(184);t.default=function(){return(0,s.jsxs)("div",{className:"text-accent h-screen flex justify-center items-center",children:[(0,s.jsx)(i.q,{children:(0,s.jsx)("title",{children:"Contact - Sheikh Shahariar Siam"})}),(0,s.jsx)("h1",{className:"sm:text-6xl text-3xl",children:"Coming Soon(contact)"})]})}}}]);
+//# sourceMappingURL=47.5e47fa1b.chunk.js.map
