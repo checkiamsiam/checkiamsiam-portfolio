@@ -19,10 +19,10 @@ const PersonalInfo = () => {
           <div>
             <div className='sm:text-lg text-md text-base-100'>
 
-              <p className='mb-3'><span className='font-semibold'>Name 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span>   Sheikh Shahariar Siam</p>
-              <p className='mb-3'><span className='font-semibold'>Age 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	: &nbsp;</span> 19</p>
-              <p className='mb-3'><span className='font-semibold '>Gender 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span> Male</p>
-              <p className='mb-3'><span className='font-semibold '>Nationality 	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span> Bangladeshi</p>
+              <p className='mb-3'><span className='font-semibold'>Name &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span>   Sheikh Shahariar Siam</p>
+              <p className='mb-3'><span className='font-semibold'>Age&nbsp; &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	: &nbsp;</span> 19</p>
+              <p className='mb-3'><span className='font-semibold '>Gender&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span> Male</p>
+              <p className='mb-3'><span className='font-semibold '>Nationality &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span> Bangladeshi</p>
 
               <p className='mb-3'><span className='font-semibold'>Present Adress 	&nbsp;	&nbsp;:	&nbsp;</span> Jatrabari, Dhaka</p>
               <p className='mb-3'><span className='font-semibold'>Occupation &nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;: &nbsp;</span> Web Developer</p>

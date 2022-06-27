@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { BiSend } from "react-icons/bi";
+import Swal from 'sweetalert2';
 
 const ContactForm = () => {
   const form = useRef();
@@ -10,7 +11,11 @@ const ContactForm = () => {
 
     emailjs.sendForm('service_0o8844l', 'template_u2g9ofm', form.current, 'llUopf-9itfABWZ3z')
       .then((result) => {
-        alert('message sent');
+        Swal.fire(
+          'message sent',
+          'You will get a confirmation mail soon',
+          'success'
+        )
         e.target.reset()
       }, (error) => {
         alert('error');

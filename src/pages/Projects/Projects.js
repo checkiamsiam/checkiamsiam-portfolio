@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import './project.css'
 import '../Home/Projects/project.css'
 
@@ -83,14 +83,16 @@ const Projects = () => {
             {showing.slice(0, 6).map(project =>
               <div>
                 <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
-                  <figure class="mx-3 mt-3 cursor-pointer">
-                    <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52" />
+                  <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
+                    <Link to={`${project.detailsRoute}`}>
+                      <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                    </Link>
 
                   </figure>
                   <div class="card-body text-base-100">
                     <h2 class="card-title text-primary">{project.name}</h2>
-                    <div className='flex gap-3 pb-3'>
-                    {project.technologyUsed.slice(0,3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
+                    <div className='flex  gap-3 pb-3'>
+                      {project.technologyUsed.slice(0, 3).map(tech => <div class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
                     </div>
                     <div className='text-right '>
                       <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
@@ -104,15 +106,17 @@ const Projects = () => {
               {showing.map(project =>
                 <div>
                   <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
-                    <figure class="mx-3 mt-3 cursor-pointer">
-                      <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52" />
+                    <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
+                      <Link to={`${project.detailsRoute}`}>
+                        <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                      </Link>
 
                     </figure>
                     <div class="card-body text-base-100">
                       <h2 class="card-title text-primary">{project.name}</h2>
                       <div className='flex gap-3 pb-3'>
-                    {project.technologyUsed.slice(0,3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
-                    </div>
+                        {project.technologyUsed.slice(0, 3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
+                      </div>
                       <div className='text-right '>
                         <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
                       </div>
@@ -121,10 +125,10 @@ const Projects = () => {
                 </div>
               )}
             </div>}
-        </div> : 
-       
+        </div> :
+
           <h1 className='text-error text-6xl text-center py-10'>Empty</h1>
-       
+
         }
       </div>
       {(!showAll && showing.length !== 0) ? <div className='flex justify-center'>
