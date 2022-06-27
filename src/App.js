@@ -22,7 +22,7 @@ function App() {
   const [showing, setShowing] = useState(projects)
   const featuredProject = projects.filter(project => project.featured === true).reverse()
   return (
-    <div>
+    <div className='app'>
       <ActiveNavContext.Provider value={{ activeCategory, setActiveCategory, projects, showing, setShowing, featured: featuredProject }}>
         <Header></Header>
         <Suspense fallback={<Loader />}>

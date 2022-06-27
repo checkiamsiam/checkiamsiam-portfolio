@@ -1,11 +1,24 @@
+:root{
+  scrollbar-color: #F27F1E #63ede1 ;
+  scrollbar-width: thin ;
+}
 
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #63ede4;
+	border-radius: 10px;
+  
+}
 
-/* animation: App-logo-spin infinite 20s linear;
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: linear-gradient(#F27F1E , white , #F27F1E );
+}
