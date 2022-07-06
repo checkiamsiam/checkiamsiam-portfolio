@@ -71,11 +71,11 @@ const Projects = () => {
         <p className='text-center italic text-primary'>All Of My Projects Showcased here</p>
         <div className='flex justify-center sm:mt-10 mt-5'>
           <div>
-            <button onClick={handleAllProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2  ${activeCategory === 'all' ? 'border-primary ' : 'border-neutral'}`}>All</button>
-            <button onClick={handleFeaturedProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'feature' ? 'border-primary' : 'border-neutral'}`}>Featured</button>
-            <button onClick={handleOrgProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'Org' ? 'border-primary' : 'border-neutral'}`}>Org.</button>
-            <button onClick={handlePersonalProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'personal' ? 'border-primary' : 'border-neutral'}`}>Personal</button>
-            <button onClick={handleSocialProjectNav} class={`p-2 md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'social' ? 'border-primary' : 'border-neutral'}`}>Social</button>
+            <button onClick={handleAllProjectNav} class={`p-2 hover:text-primary transition duration-400 md:text-xl text-xs uppercase text-base-100 border-b-2  ${activeCategory === 'all' ? 'border-primary ' : 'border-neutral'}`}>All</button>
+            <button onClick={handleFeaturedProjectNav} class={`p-2 hover:text-primary transition duration-400  md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'feature' ? 'border-primary' : 'border-neutral'}`}>Featured</button>
+            <button onClick={handleOrgProjectNav} class={`p-2 hover:text-primary transition duration-400  md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'Org' ? 'border-primary' : 'border-neutral'}`}>Org.</button>
+            <button onClick={handlePersonalProjectNav} class={`p-2 hover:text-primary transition duration-400  md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'personal' ? 'border-primary' : 'border-neutral'}`}>Personal</button>
+            <button onClick={handleSocialProjectNav} class={`p-2 hover:text-primary transition duration-400  md:text-xl text-xs uppercase text-base-100 border-b-2 ${activeCategory === 'social' ? 'border-primary' : 'border-neutral'}`}>Social</button>
           </div>
         </div>
         {showing.length !== 0 ? <div>
@@ -94,8 +94,8 @@ const Projects = () => {
                     <div className='flex  gap-3 pb-3'>
                       {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
                     </div>
-                    <div className='text-right '>
-                      <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+                    <div className='flex justify-end '>
+                      <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
                     </div>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ const Projects = () => {
                       <div className='flex gap-3 pb-3'>
                         {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech}</div>)}
                       </div>
-                      <div className='text-right '>
-                        <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+                      <div className='flex justify-end '>
+                        <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
                       </div>
                     </div>
                   </div>
@@ -134,10 +134,10 @@ const Projects = () => {
       {(!showAll && showing.length !== 0) ? <div className='flex justify-center'>
         <button onClick={() => {
           setShowAll(!showAll)
-        }} className='custom-btn m-5'>Show All</button>
+        }} className='custom-btn m-5 btn btn-ghost'>Show All</button>
       </div> :
         <div className='flex justify-center'>
-          <button onClick={goNext} className='custom-btn m-5'>Next</button>
+          <button onClick={goNext} className='custom-btn m-5 btn btn-ghost'>Next</button>
         </div>
       }
     </div>

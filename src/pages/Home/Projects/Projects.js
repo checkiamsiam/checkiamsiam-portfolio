@@ -26,8 +26,8 @@ const Projects = () => {
           <div class="card-body text-base-100">
             <h2 class="card-title text-primary">{featuredProjectOne.name}</h2>
             <p>{featuredProjectOne.description}</p>
-            <div className='text-right '>
-              <Link to={`projects/${featuredProjectOne.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+            <div className='flex justify-end'>
+              <Link to={`projects/${featuredProjectOne.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
             </div>
           </div>
         </div>
@@ -44,8 +44,8 @@ const Projects = () => {
           <div class="card-body text-base-100">
             <h2 class="card-title text-primary">{featuredProjectTwo.name}</h2>
             <p>{featuredProjectTwo.description}</p>
-            <div className='text-right '>
-              <Link to={`projects/${featuredProjectTwo.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+            <div className='flex justify-end '>
+              <Link to={`projects/${featuredProjectTwo.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
             </div>
           </div>
         </div>
@@ -62,8 +62,8 @@ const Projects = () => {
           <div class="card-body text-base-100">
             <h2 class="card-title text-primary">{featuredProjectThree.name}</h2>
             <p>{featuredProjectThree.description}</p>
-            <div className='text-right '>
-              <Link to={`projects/${featuredProjectThree.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+            <div className='flex justify-end'>
+              <Link to={`projects/${featuredProjectThree.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Projects = () => {
         <Link onClick={() => {
           setActiveCategory('feature')
           setShowing(featured)
-        }} className='custom-btn m-5' to='/projects'>See More</Link>
+        }} className='custom-btn m-5 btn btn-ghost' to='/projects'>See More</Link>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const Banner = () => {
               <p className='md:text-2xl text-xl text-base-100 capitalize'>'Coding' is the most favorite Word of my life. i'm a self learner who enjoy to analysis any new thing. </p>
             </div>
             <div>
-              <a target='_blank' class="dedcription-btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">
+              <a target='_blank' class="dedcription-btn btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">
                 <span class="name-descripeion">Download Resume</span>
                 <BiCloudDownload class="btn-icon" />
               </a>

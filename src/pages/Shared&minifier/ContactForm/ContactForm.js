@@ -32,7 +32,7 @@ const ContactForm = () => {
         <textarea name='message' class="textarea w-full h-32 bg-neutral text-base-100  focus:outline-primary focus:outline-1 rounded-2xl" placeholder="MESSAGE"></textarea>
       </div>
       <div>
-        <button type='submit' class="dedcription-btn">
+        <button type='submit' class="dedcription-btn btn">
           <span class="name-descripeion">Send Message</span>
           <BiSend class="btn-icon" />
         </button>

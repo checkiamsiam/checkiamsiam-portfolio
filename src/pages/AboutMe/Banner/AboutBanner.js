@@ -34,7 +34,7 @@ const AboutBanner = () => {
                   </p>
                 </div>
                 <div>
-                  <a target='_blank' class="dedcription-btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">
+                  <a target='_blank' class="dedcription-btn btn" href="https://drive.google.com/file/d/1ShKKTsrgN_E1W1yYxhBklMhuPVOeDZcu/view?usp=sharing">
                     <span class="name-descripeion">Download Resume</span>
                     <BiCloudDownload class="btn-icon" />
                   </a>

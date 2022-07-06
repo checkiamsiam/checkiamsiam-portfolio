@@ -2,7 +2,7 @@
 .dedcription-btn {
   width: 200px;
   position: relative;
-  display: inline-block;
+  display: flex;
   border-radius: 30px;
   background-color: #fcfcfc;
   color: #F27F1E;
@@ -19,7 +19,7 @@
   color: black;
   background-color: #ffa000;
   width: 50px;
-  height: 37.5px;
+  height: 46px;
   float: right;
   position: absolute;
   border-radius: 30px 30px 30px 0px;
