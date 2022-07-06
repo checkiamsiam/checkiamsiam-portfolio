@@ -8,7 +8,7 @@ const Footer = () => {
         <div class="text-md sm:text-lg container mx-auto flex md:flex-row flex-col items-center justify-around">
 
           <div class=" text-primary">
-            <Link to='/' class=" title-font text-2xl sm:text-3xl"> {`< SIAM />`} </Link>
+            <Link to='/' class=" title-font text-2xl sm:text-3xl cursor-pointer"> {`< SIAM />`} </Link>
           </div>
 
           <div class="header-options">

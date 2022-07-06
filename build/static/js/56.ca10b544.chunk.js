@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_of_checkiamsiam=self.webpackChunkportfolio_of_checkiamsiam||[]).push([[56],{7056:function(o,e,c){c.r(e);var f=c(2791),n=c(6871);e.default=(0,f.memo)((function(){var o=(0,n.TH)().pathname;return(0,f.useEffect)((function(){window.scrollTo(0,0)}),[o]),null}))}}]);
+//# sourceMappingURL=56.ca10b544.chunk.js.map

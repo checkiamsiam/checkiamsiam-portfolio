@@ -1,11 +1,14 @@
-import React  , {memo} from 'react';
+import React  , {memo, useContext} from 'react';
 import { useParams } from 'react-router-dom';
+import { ActiveNavContext } from '../../App';
 
 const ProjectDetail = () => {
   const { route } = useParams();
-  console.log(route);
+  const {projects} = useContext(ActiveNavContext)
+  const thisProject = projects.find(product => product.detailsRoute === route)
+
   return (
-    <div>
+    <div className='mt-20'>
       dfds
     </div>
   );

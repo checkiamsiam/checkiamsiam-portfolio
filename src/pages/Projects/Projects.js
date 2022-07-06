@@ -85,7 +85,7 @@ const Projects = () => {
                 <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                   <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                     <Link to={`${project.detailsRoute}`}>
-                      <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                      <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500 cursor-pointer" />
                     </Link>
 
                   </figure>
@@ -108,7 +108,7 @@ const Projects = () => {
                   <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                     <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                       <Link to={`${project.detailsRoute}`}>
-                        <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                        <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500 cursor-pointer" />
                       </Link>
 
                     </figure>

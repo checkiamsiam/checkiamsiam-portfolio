@@ -14,6 +14,7 @@
   padding-right: 40px;
   margin: 20px 5px;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
 }
 .dedcription-btn .btn-icon {
   color: black;
@@ -26,9 +27,11 @@
   right: 0px;
   top: 0px;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .name-descripeion {
   position: relative;
+  cursor: pointer;
 }
 .btn-icon::after {
   content: "";
@@ -39,16 +42,20 @@
   position: absolute;
   top: 0px;
   left: 0px;
+  cursor: pointer;
 }
 .dedcription-btn:hover .btn-icon {
   width: 100%;
   border-radius: 30px;
+  cursor: pointer;
 }
 .dedcription-btn:hover .btn-icon::after {
   display: none;
   opacity: 0.1;
+  cursor: pointer;
 }
 
 .dedcription-btn:hover {
   color: transparent ;
+  cursor: pointer;
 }
