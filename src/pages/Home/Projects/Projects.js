@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState , memo } from 'react';
 import { Link } from 'react-router-dom';
 import './project.css'
 import { featuredProjectOne, featuredProjectTwo, featuredProjectThree } from '../../../FakeData/FeaturedProjects/FeaturedProjects';
 import { ActiveNavContext } from '../../../App';
 
 const Projects = () => {
-  const {setActiveCategory , setShowing , featured} = useContext(ActiveNavContext);
+  const { setActiveCategory, setShowing, featured } = useContext(ActiveNavContext);
   const [visible1, setVisible1] = useState(false)
   const [visible2, setVisible2] = useState(false)
   const [visible3, setVisible3] = useState(false)
@@ -15,7 +15,7 @@ const Projects = () => {
       <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'>
         <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
           <figure onMouseMove={() => setVisible1(true)} onMouseOut={() => setVisible1(false)} class="mx-3 mt-3 cursor-pointer relative">
-            <img src={featuredProjectOne.img} alt="Website-overview" class="rounded-xl" />
+            <img src={featuredProjectOne.img[0]} alt="Website-overview" class="rounded-xl" />
             {visible1 && <div className='rounded-xl absolute bg-[rgba(0,0,0,0.7)] w-full h-full text-base-100 flex justify-center items-center'>
               <div className='flex gap-3'>
                 <a className='custom-btn btn-12' target='_blank' href={featuredProjectOne.liveLink}><span className='bg-neutral'>GO</span><span className='bg-gradient-to-r from-primary via-orange-300 to-secondary'>Live Preview</span></a>
@@ -27,13 +27,13 @@ const Projects = () => {
             <h2 class="card-title text-primary">{featuredProjectOne.name}</h2>
             <p>{featuredProjectOne.description}</p>
             <div className='text-right '>
-              <Link to={`project/${featuredProjectOne.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+              <Link to={`projects/${featuredProjectOne.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
             </div>
           </div>
         </div>
         <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
           <figure onMouseMove={() => setVisible2(true)} onMouseOut={() => setVisible2(false)} class="mx-3 mt-3 cursor-pointer relative">
-            <img src={featuredProjectTwo.img} alt="Website-overview" class="rounded-xl" />
+            <img src={featuredProjectTwo.img[0]} alt="Website-overview" class="rounded-xl" />
             {visible2 && <div className='rounded-xl absolute bg-[rgba(0,0,0,0.7)] w-full h-full text-base-100 flex justify-center items-center'>
               <div className='flex gap-3'>
                 <a className='custom-btn btn-12' target='_blank' href={featuredProjectTwo.liveLink}><span className='bg-neutral'>GO</span><span className='bg-gradient-to-r from-primary via-orange-300 to-secondary'>Live Preview</span></a>
@@ -45,13 +45,13 @@ const Projects = () => {
             <h2 class="card-title text-primary">{featuredProjectTwo.name}</h2>
             <p>{featuredProjectTwo.description}</p>
             <div className='text-right '>
-              <Link to={`project/${featuredProjectTwo.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+              <Link to={`projects/${featuredProjectTwo.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
             </div>
           </div>
         </div>
         <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
           <figure onMouseMove={() => setVisible3(true)} onMouseOut={() => setVisible3(false)} class="mx-3 mt-3 cursor-pointer relative">
-            <img src={featuredProjectThree.img} alt="Website-overview" class="rounded-xl" />
+            <img src={featuredProjectThree.img[0]} alt="Website-overview" class="rounded-xl" />
             {visible3 && <div className='rounded-xl absolute bg-[rgba(0,0,0,0.7)] w-full h-full text-base-100 flex justify-center items-center'>
               <div className='flex gap-3'>
                 <a className='custom-btn btn-12' target='_blank' href={featuredProjectThree.liveLink}><span className='bg-neutral'>GO</span><span className='bg-gradient-to-r from-primary via-orange-300 to-secondary'>Live Preview</span></a>
@@ -63,19 +63,19 @@ const Projects = () => {
             <h2 class="card-title text-primary">{featuredProjectThree.name}</h2>
             <p>{featuredProjectThree.description}</p>
             <div className='text-right '>
-              <Link to={`project/${featuredProjectThree.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
+              <Link to={`projects/${featuredProjectThree.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
             </div>
           </div>
         </div>
       </div>
       <div className='flex justify-center'>
-        <Link onClick={()=> {
+        <Link onClick={() => {
           setActiveCategory('feature')
           setShowing(featured)
-          }} className='custom-btn m-5' to='/projects'>See More</Link>
+        }} className='custom-btn m-5' to='/projects'>See More</Link>
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default memo(Projects);

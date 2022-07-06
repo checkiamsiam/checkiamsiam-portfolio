@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from "react-helmet";
+import React , {memo} from 'react';
+import { Helmet } from "react-helmet-async";
 import ContactBanner from './Banner/Banner';
 import DirectMessage from './DirectMessage/DirectMessage';
 
@@ -15,4 +15,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {memo} from 'react';
 import TypeAnimation from 'react-type-animation';
 import { MdEmail } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -76,4 +76,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default memo(ContactSection);

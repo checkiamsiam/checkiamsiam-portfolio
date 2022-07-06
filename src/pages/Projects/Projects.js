@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState , memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import './project.css'
 import '../Home/Projects/project.css'
 
@@ -80,19 +80,19 @@ const Projects = () => {
         </div>
         {showing.length !== 0 ? <div>
           {!showAll ? <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
-            {showing.slice(0, 6).map(project =>
-              <div>
+            {showing.slice(0, 6).map((project, index) =>
+              <div key={index} >
                 <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                   <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                     <Link to={`${project.detailsRoute}`}>
-                      <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                      <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
                     </Link>
 
                   </figure>
                   <div class="card-body text-base-100">
                     <h2 class="card-title text-primary">{project.name}</h2>
                     <div className='flex  gap-3 pb-3'>
-                      {project.technologyUsed.slice(0, 3).map(tech => <div class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
+                      {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
                     </div>
                     <div className='text-right '>
                       <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
@@ -103,19 +103,19 @@ const Projects = () => {
             )}
           </div> :
             <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
-              {showing.map(project =>
-                <div>
+              {showing.map((project, index) =>
+                <div key={index}>
                   <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                     <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                       <Link to={`${project.detailsRoute}`}>
-                        <img src={project.img} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
+                        <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500" />
                       </Link>
 
                     </figure>
                     <div class="card-body text-base-100">
                       <h2 class="card-title text-primary">{project.name}</h2>
                       <div className='flex gap-3 pb-3'>
-                        {project.technologyUsed.slice(0, 3).map(tech => <div class="badge badge-lg text-accent">{tech}</div>)}
+                        {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech}</div>)}
                       </div>
                       <div className='text-right '>
                         <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn text-center'>Details</Link>
@@ -144,4 +144,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default memo(Projects);

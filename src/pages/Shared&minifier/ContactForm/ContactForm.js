@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef , memo } from 'react';
 import emailjs from '@emailjs/browser';
 import { BiSend } from "react-icons/bi";
 import Swal from 'sweetalert2';
@@ -41,4 +41,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default memo(ContactForm);

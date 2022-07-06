@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Divide as Hamburger } from 'hamburger-react'
 import { AiFillHome } from "react-icons/ai";
@@ -81,4 +81,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, memo } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function ScrollTopOnRouteChange() {
+export default memo(function ScrollTopOnRouteChange() {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -9,4 +9,4 @@ export default function ScrollTopOnRouteChange() {
   }, [pathname]);
 
   return null;
-}
+})

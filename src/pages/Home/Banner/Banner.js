@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {memo} from 'react';
 import TypeAnimation from 'react-type-animation';
 import { BiCloudDownload } from "react-icons/bi";
 import './Banner.css'
@@ -59,4 +59,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default memo(Banner);

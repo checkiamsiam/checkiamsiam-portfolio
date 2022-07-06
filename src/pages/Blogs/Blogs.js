@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from "react-helmet";
+import React , {memo} from 'react';
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   return (
@@ -12,4 +12,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default memo(Blogs);

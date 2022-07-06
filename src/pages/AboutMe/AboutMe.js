@@ -1,8 +1,8 @@
-import React from 'react';
+import React , {memo} from 'react';
 import AboutBanner from './Banner/AboutBanner';
 import MySkill from './MySkills/MySkill';
 import PersonalInfo from './PersonalInfo/Personalinfo';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Education from './Education/Education';
 
 const AboutMe = () => {
@@ -22,4 +22,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default memo(AboutMe);

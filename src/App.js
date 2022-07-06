@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { projectFour, projectOne, projectThree, projectTwo } from './FakeData/All Project/AllProject';
 import { featuredProjectOne, featuredProjectThree, featuredProjectTwo } from './FakeData/FeaturedProjects/FeaturedProjects';
+const ProjectDetail = lazy(() => import('./pages/Details/Details'));
 const Loader = lazy(() => import('./pages/Shared&minifier/Loader/Loader'));
 const AboutMe = lazy(() => import('./pages/AboutMe/AboutMe'));
 const Blogs = lazy(() => import('./pages/Blogs/Blogs'));
@@ -30,6 +31,7 @@ function App() {
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/about' element={<AboutMe />}></Route>
             <Route path='/projects' element={<Projects />}></Route>
+            <Route path='/projects/:route' element={<ProjectDetail />}></Route>
             <Route path='/blogs' element={<Blogs />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='*' element={<NotFound />}></Route>

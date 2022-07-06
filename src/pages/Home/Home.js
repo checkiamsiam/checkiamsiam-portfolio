@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Banner from './Banner/Banner';
 import ContactSection from './Contact/ContactSection';
 import Projects from './Projects/Projects';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <div>
-      <Helmet>
-         <title>Home - Sheikh Shahariar Siam</title>
+      <Helmet prioritizeSeoTags>
+        <title>Home - Sheikh Shahariar Siam</title>
+        <meta property="og:title" content="Developer portfolio homepage, visit to see featured projects, testimonial and know about him" />
       </Helmet>
       <Banner></Banner>
       <Projects></Projects>
@@ -17,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);
