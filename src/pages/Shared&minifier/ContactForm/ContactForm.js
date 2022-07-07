@@ -24,12 +24,12 @@ const ContactForm = () => {
   return (
     <form ref={form} onSubmit={sendEmail}>
       <div className='flex md:flex-row flex-col gap-5 mb-5'>
-        <input name='name' type="text" placeholder="YOUR NAME" class="input bg-neutral w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
-        <input name='email' type="text" placeholder="EMAIL" class="input bg-neutral  w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
-        <input name='subject' type="text" placeholder="SUBJECT" class="input bg-neutral focus:outline-primary focus:outline-1 w-full rounded-full text-base-100 " />
+        <input name='name' type="text" placeholder="YOUR NAME" class="input cursor-text bg-neutral w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
+        <input name='email' type="text" placeholder="EMAIL" class="input cursor-text bg-neutral  w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
+        <input name='subject' type="text" placeholder="SUBJECT" class="input cursor-text bg-neutral focus:outline-primary focus:outline-1 w-full rounded-full text-base-100 " />
       </div>
       <div>
-        <textarea name='message' class="textarea w-full h-32 bg-neutral text-base-100  focus:outline-primary focus:outline-1 rounded-2xl" placeholder="MESSAGE"></textarea>
+        <textarea name='message' class="textarea cursor-text w-full h-32 bg-neutral text-base-100  focus:outline-primary focus:outline-1 rounded-2xl" placeholder="MESSAGE"></textarea>
       </div>
       <div>
         <button type='submit' class="dedcription-btn btn">

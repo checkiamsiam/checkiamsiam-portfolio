@@ -1,4 +1,4 @@
-import React, { useContext, useState , memo } from 'react';
+import React, { useContext, useState, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
 import { Helmet } from "react-helmet-async";
@@ -82,7 +82,7 @@ const Projects = () => {
           {!showAll ? <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
             {showing.slice(0, 6).map((project, index) =>
               <div key={index} >
-                <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
+                <div class="p-2 rounded-2xl bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                   <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                     <Link to={`${project.detailsRoute}`}>
                       <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500 cursor-pointer" />
@@ -92,7 +92,7 @@ const Projects = () => {
                   <div class="card-body text-base-100">
                     <h2 class="card-title text-primary">{project.name}</h2>
                     <div className='flex  gap-3 pb-3'>
-                      {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
+                      {project.technologyUsed.slice(0, 3).map((tech, index) => <div key={index} class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
                     </div>
                     <div className='flex justify-end '>
                       <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
@@ -105,7 +105,7 @@ const Projects = () => {
             <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
               {showing.map((project, index) =>
                 <div key={index}>
-                  <div class="card  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
+                  <div class="p-2 rounded-xl  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                     <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                       <Link to={`${project.detailsRoute}`}>
                         <img src={project.img[0]} alt="Website-overview" class="rounded-xl md:h-52 hover:translate-x-2 hover:-translate-y-2 transition duration-500 cursor-pointer" />
@@ -115,7 +115,7 @@ const Projects = () => {
                     <div class="card-body text-base-100">
                       <h2 class="card-title text-primary">{project.name}</h2>
                       <div className='flex gap-3 pb-3'>
-                        {project.technologyUsed.slice(0, 3).map((tech , index) => <div key={index} class="badge badge-lg text-accent">{tech}</div>)}
+                        {project.technologyUsed.slice(0, 3).map((tech, index) => <div key={index} class="badge badge-lg text-accent">{tech}</div>)}
                       </div>
                       <div className='flex justify-end '>
                         <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>

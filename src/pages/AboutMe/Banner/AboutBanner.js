@@ -44,7 +44,7 @@ const AboutBanner = () => {
             <div className='lg:w-1/2 flex items-center justify-center'>
               <div className=' flex flex-col justify-center '>
                 <div className='relative'>          
-                  <img class="mask mask-squircle w-80 border-8  border-primary cursor-grab " src="https://i.ibb.co/q5krwXx/professional-siam.jpg" />
+                  <img class="mask mask-squircle w-80 border-8  border-primary cursor-grab myimg" src="https://i.ibb.co/q5krwXx/professional-siam.jpg" />
                   <div className='w-6 h-6 bg-primary rounded-full absolute top-2 right-2'></div>
                   <div className='w-2 h-2 bg-primary rounded-full absolute top-0 right-0'></div>
                 </div>

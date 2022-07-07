@@ -57,13 +57,29 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`fixed bottom-5 right-2 z-50 sm:block hidden hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'}  `}>
-        <div className='flex  flex-col gap-3 z-50 text-base-100 '>
-          <NavLink className='text-3xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer' to='/'><AiFillHome className='cursor-pointer'/></NavLink>
-          <NavLink className='text-3xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent  transition duration-500 cursor-pointer' to='/about'><SiAboutdotme /></NavLink>
-          <NavLink className='text-3xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer' to='/projects'><AiFillProject /></NavLink>
-          <NavLink className='text-3xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent  transition duration-500 cursor-pointer' to='/blogs'><BiMessageSquareDetail /></NavLink>
-          <NavLink className='text-3xl p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer' to='/contact'><MdContactMail /></NavLink>
+      <div className='z-50 sm:block hidden'>
+        <div className='z-50 text-base-100 '>
+          <NavLink to='/' className={`fixed  bottom-[280px] right-2 icon-nav1 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav1 cursor-pointer'>HOME</span>
+            <span className='text-3xl '><AiFillHome className='cursor-pointer' /></span>
+          </NavLink>
+          <NavLink to='/about' className={`fixed  bottom-[215px] right-2 icon-nav2 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav2 cursor-pointer'>ABOUT</span>
+            <span className='text-3xl  '><SiAboutdotme className='cursor-pointer' /></span>
+          </NavLink>
+          <NavLink to='/projects' className={`fixed  bottom-[150px] right-2 icon-nav3 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav3 cursor-pointer'>PROJECTS</span>
+            <span className='text-3xl '><AiFillProject className='cursor-pointer' /></span>
+          </NavLink>
+          <NavLink to='/blogs' className={`fixed  bottom-[85px] right-2 icon-nav4 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav4 cursor-pointer'>BLOGS</span>
+            <span className='text-3xl'><BiMessageSquareDetail className='cursor-pointer' /></span>
+          </NavLink>
+          <NavLink to='/contact' className={`fixed  bottom-5 right-2 icon-nav5 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav5 cursor-pointer'>CONTACT</span>
+            <span className='text-3xl '><MdContactMail className='cursor-pointer' /></span>
+          </NavLink>
+
         </div>
       </div>
       <div className='flex justify-center '>

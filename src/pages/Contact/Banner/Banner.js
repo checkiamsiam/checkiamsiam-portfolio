@@ -13,7 +13,7 @@ const ContactBanner = () => {
       <p className='md:w-3/4 px-5 mx-auto text-base-100 text-center font-semibold text-lg'>Are you looking for me? need me? contact with me? always i'm ready for you. Here is some way to contact with me. Check it out</p>
       <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10 '>
 
-        <div class="card bg-neutral text-neutral-content">
+        <div class="rounded-lg bg-neutral text-neutral-content">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player
@@ -28,7 +28,7 @@ const ContactBanner = () => {
             <p class="card-actions justify-end font-semibold ">+8801910072661 </p>
           </div>
         </div>
-        <div class="card bg-neutral text-neutral-content">
+        <div class="rounded-lg bg-neutral text-neutral-content">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player
@@ -43,7 +43,7 @@ const ContactBanner = () => {
             <p class="card-actions justify-end font-semibold ">issiam02415@gmail.com</p>
           </div>
         </div>
-        <div class="card bg-neutral text-neutral-content">
+        <div class="rounded-lg bg-neutral text-neutral-content ">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player

@@ -1,5 +1,5 @@
 .active{
-  color: #F27F1E;
+  color: #63ede1;
 }
 .title-font{
   font-family: 'Dancing Script', cursive;
@@ -46,6 +46,47 @@
   position: fixed;
   bottom: 1.5rem;
   transition: 0.4s linear;
+}
+
+.text-nav1 {
+display: none;
+
+}
+.icon-nav1:hover  .text-nav1 {
+  display: block;
+  z-index: 100;
+}
+.text-nav2 {
+display: none;
+
+}
+.icon-nav2:hover  .text-nav2 {
+  display: block;
+  z-index: 100;
+}
+.text-nav3 {
+display: none;
+
+}
+.icon-nav3:hover  .text-nav3 {
+  display: block;
+  z-index: 100;
+}
+.text-nav4 {
+display: none;
+
+}
+.icon-nav4:hover  .text-nav4 {
+  display: block;
+  z-index: 100;
+}
+.text-nav5 {
+display: none;
+
+}
+.icon-nav5:hover  .text-nav5 {
+  display: block;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 600px) {

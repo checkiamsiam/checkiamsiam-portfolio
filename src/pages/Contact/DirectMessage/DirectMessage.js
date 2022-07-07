@@ -9,17 +9,17 @@ const DirectMessage = () => {
 
     <div className='py-10 container mx-auto px-5'>
       <h1 className='text-accent text-3xl title-font text-center'>Direct Message</h1>
-      <p className='md:w-3/4 px-5 mt-5 mx-auto text-base-100 text-center font-semibold text-lg'>I am fully a free minded person. You can send me direct message for contact with me. i will reply in your email as soon as possible.</p>
+      <p className='md:w-3/4 px-5 my-5 mx-auto text-base-100 text-center font-semibold text-lg'>I am fully a free minded person. You can send me direct message for contact with me. i will reply in your email as soon as possible.</p>
       <div className='xl:flex justify-between md:px-14 '>
         <div className='flex flex-col gap-5 justify-center items-center'>
           <div>
-          <Player
-                autoplay
-                loop
-                src="https://assets6.lottiefiles.com/packages/lf20_o9tuy0fs.json"
-                className='w-96  text-red-300'
-              >
-              </Player>
+            <Player
+              autoplay
+              loop
+              src="https://assets6.lottiefiles.com/packages/lf20_o9tuy0fs.json"
+              className='w-80 sm:w-96  text-red-300'
+            >
+            </Player>
 
           </div>
         </div>
