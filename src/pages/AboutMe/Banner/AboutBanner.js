@@ -48,7 +48,7 @@ const AboutBanner = () => {
                   <div className='w-6 h-6 bg-primary rounded-full absolute top-2 right-2'></div>
                   <div className='w-2 h-2 bg-primary rounded-full absolute top-0 right-0'></div>
                 </div>
-                <div className='w-full h-2 bg-primary mt-2 rounded-md'></div>
+               
               </div>
             </div>
           </div>
