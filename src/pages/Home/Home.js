@@ -3,6 +3,7 @@ import Banner from './Banner/Banner';
 import ContactSection from './Contact/ContactSection';
 import Projects from './Projects/Projects';
 import { Helmet } from "react-helmet-async";
+import Services from './Services/Services';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <meta property="og:title" content="Developer portfolio homepage, visit to see featured projects, testimonial and know about him" />
       </Helmet>
       <Banner></Banner>
+      <Services></Services>
       <Projects></Projects>
       <ContactSection></ContactSection>
     </div>

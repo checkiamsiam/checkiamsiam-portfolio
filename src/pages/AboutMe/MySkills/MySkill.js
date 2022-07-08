@@ -17,7 +17,11 @@ const MySkill = () => {
 
   return (
     <div className='py-10 px-5 container mx-auto'>
-      <h1 className=' text-center   '><span className='text-accent text-4xl title-font relative skills-title z-30'>My Skills</span></h1>
+      <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
+        <div className='h-[2px] w-5 bg-primary'></div>
+        My Skills
+        <div className='h-[2px] w-5 bg-primary'></div>
+      </div>
       <h1 className='text-base-100 text-center italic'>Here Is My Overview Of Coding Strategy</h1>
       <div className='text-base-100 mt-10'>
         <div className='flex flex-wrap justify-center  gap-10'>

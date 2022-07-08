@@ -14,7 +14,11 @@ const ContactSection = () => {
 
     <div className='py-10 container mx-auto px-5'>
       <div className='flex justify-center relative'>
-        <h1 className='text-accent text-3xl title-font text-center'>Feel Free To Me</h1>
+      <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
+        <div className='h-[2px] w-5 bg-primary'></div>
+        Feel Free To Me
+        <div className='h-[2px] w-5 bg-primary'></div>
+      </div>
 
         <Player
           autoplay

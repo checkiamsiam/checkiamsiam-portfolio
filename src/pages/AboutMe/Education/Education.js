@@ -5,7 +5,11 @@ import { FaGraduationCap } from 'react-icons/fa'
 const Education = () => {
   return (
     <div className='container mx-auto py-10   px-5'>
-      <h1 className=' text-center   '><span className='text-accent text-4xl title-font flex md:gap-3 justify-center'><FaGraduationCap /> Educational & Courses</span></h1>
+      <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
+        <div className='h-[2px] w-5 bg-primary'></div>
+         <FaGraduationCap className='sm:block hidden'/> Education & Courses
+        <div className='h-[2px] w-5 bg-primary'></div>
+      </div>
       <div className='lg:flex'>
         <div className='lg:w-1/2 '>
           <Player

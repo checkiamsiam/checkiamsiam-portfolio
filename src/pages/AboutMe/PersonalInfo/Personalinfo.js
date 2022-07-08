@@ -4,7 +4,11 @@ import { TiInfoLargeOutline } from 'react-icons/ti'
 const PersonalInfo = () => {
   return (
     <div className='py-10  container mx-auto'>
-      <h1 className=' text-center mb-10 flex justify-center text-primary'><span className='text-accent text-4xl title-font '>PERSONAL INFO</span><TiInfoLargeOutline/></h1>
+      <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-1'>
+        <div className='h-[2px] w-4 bg-primary'></div>
+        PERSONAL INFO <TiInfoLargeOutline className='text-sm mb-7'/>
+        <div className='h-[2px] w-4 bg-primary'></div>
+      </div>
       <div className='lg:flex gap-5'>
 
         <div className='flex justify-center items-center lg:w-1/2'>
