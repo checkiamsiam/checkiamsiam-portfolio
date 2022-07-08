@@ -61,12 +61,12 @@ const ProjectDetail = () => {
         </Slider>
       </section>
       <section className='container mx-auto text-base-100 px-5 mt-20'>
-        <div>
+       { thisProject?.specialty && <div>
           <h1 className='font-extrabold text-3xl mb-3'>Key Features :</h1>
           <ol className='list-disc grid sm:grid-cols-2 grid-cols-1 px-5 mb-10 sm:text-xl '>
             {thisProject?.specialty?.map(feature => <li>{feature}</li>)}
           </ol>
-        </div>
+        </div>}
         <div>
           <h1 className='font-extrabold text-3xl mb-3'>Used Technology :</h1>
           <ol className='list-disc grid sm:grid-cols-2 grid-cols-1 px-5 sm:text-xl mb-10'>

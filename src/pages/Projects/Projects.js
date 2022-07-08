@@ -115,7 +115,7 @@ const Projects = () => {
                     <div class="card-body text-base-100">
                       <h2 class="card-title text-primary">{project.name}</h2>
                       <div className='flex gap-3 pb-3'>
-                        {project.technologyUsed.slice(0, 3).map((tech, index) => <div key={index} class="badge badge-lg text-accent">{tech}</div>)}
+                        {project.technologyUsed.slice(0, 3).map((tech, index) => <div key={index} class="badge badge-lg text-accent">{tech.split(" ")[0]}</div>)}
                       </div>
                       <div className='flex justify-end '>
                         <Link to={`${project.detailsRoute}`} className='link link-hover custom-btn btn btn-ghost text-center'>Details</Link>
