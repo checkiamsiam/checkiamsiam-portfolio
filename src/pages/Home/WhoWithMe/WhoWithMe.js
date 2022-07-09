@@ -20,7 +20,7 @@ const WhoWithMe = () => {
             <div className='flex flex-col justify-center items-center'>
               <div class="avatar ">
                 <div class="w-36 rounded-full  border-4 border-accent effected-border">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src="https://i.ibb.co/TMzxH2t/ali.png" />
                 </div>
               </div>
               <h1 className='text-4xl font-extrabold text-center mt-5'>Mohammad Ali</h1>
@@ -43,7 +43,7 @@ const WhoWithMe = () => {
             <div className='flex flex-col justify-center items-center'>
               <div class="avatar ">
                 <div class="w-36 rounded-full  border-4 border-accent effected-border">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src="https://i.ibb.co/1bVhXS7/sakib.png" />
                 </div>
               </div>
               <h1 className='text-4xl font-extrabold text-center mt-5'>Akram Sakib</h1>
@@ -66,7 +66,7 @@ const WhoWithMe = () => {
             <div className='flex flex-col justify-center items-center'>
               <div class="avatar ">
                 <div class="w-36 rounded-full  border-4 border-accent effected-border">
-                  <img src="https://placeimg.com/192/192/people" />
+                  <img src="https://i.ibb.co/S3mgCbX/nasim.jpg" />
                 </div>
               </div>
               <h1 className='text-4xl font-extrabold text-center mt-5'>Nasimur Rahman</h1>
@@ -76,8 +76,8 @@ const WhoWithMe = () => {
           </div>
           <footer className='effected-footer absolute bottom-0  h-14 w-full bg-primary'>
             <div className='flex justify-center pt-2 items-center text-base-100 gap-3'>
-              <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://www.facebook.com/checkiamsiam/"><FaFacebookF /></a>
-              <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://www.facebook.com/checkiamsiam/"><BsTwitter /></a>
+              <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://www.facebook.com/nasimur.rahman.5209"><FaFacebookF /></a>
+              <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://github.com/NasimurRahman"><BsTwitter /></a>
               <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://www.facebook.com/checkiamsiam/"><BsGithub /></a>
               <a target='_blank' className='text-xl p-3 cursor-pointer bg-neutral text-accent hover:text-neutral hover:bg-accent rounded-full transition duration-500 ' href="https://www.facebook.com/checkiamsiam/"><AiFillLinkedin /></a>
 
