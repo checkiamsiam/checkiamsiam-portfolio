@@ -4,6 +4,7 @@ import ContactSection from './Contact/ContactSection';
 import Projects from './Projects/Projects';
 import { Helmet } from "react-helmet-async";
 import Services from './Services/Services';
+import WhoWithMe from './WhoWithMe/WhoWithMe';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner></Banner>
       <Services></Services>
       <Projects></Projects>
+      <WhoWithMe></WhoWithMe>
       <ContactSection></ContactSection>
     </div>
   );

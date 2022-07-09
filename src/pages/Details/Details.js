@@ -48,7 +48,7 @@ const ProjectDetail = () => {
   return (
     <div className='sm:mt-24 mt-20 '>
       <h1 className=' text-center mb-9 sm:mb-0 '><span className='text-accent text-4xl title-font details-title relative z-30'>{thisProject?.name}</span></h1>
-      <p className='md:w-3/4 px-5 sm:py-5 mx-auto text-base-100 text-center font-semibold text-lg'>{thisProject?.description}</p>
+      <p className='md:w-3/4 px-5 pb-5 sm:pt-5 mx-auto text-base-100 text-center font-semibold text-lg'>{thisProject?.description}</p>
       <section>
         <Slider {...settings}>
           {

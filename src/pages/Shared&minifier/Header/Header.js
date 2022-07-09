@@ -57,10 +57,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='z-50 sm:block hidden'>
+      <div className='z-50 sm:block hidden relative'>
         <div className='z-50 text-base-100 '>
-          <NavLink to='/' className={`fixed  bottom-[280px] right-2 icon-nav1 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
-            <span className='font-bold text-xl text-nav1 cursor-pointer'>HOME</span>
+          <NavLink to='/' className={`fixed  bottom-[280px]  right-2 icon-nav1 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>
+            <span className='font-bold text-xl text-nav1 cursor-pointer z-50'>HOME</span>
             <span className='text-3xl '><AiFillHome className='cursor-pointer' /></span>
           </NavLink>
           <NavLink to='/about' className={`fixed  bottom-[215px] right-2 icon-nav2 flex items-center justify-center gap-3 w-fit p-3 bg-neutral rounded-full hover:bg-primary hover:text-accent transition duration-500 cursor-pointer mb-2 hideIconsDesk ${(show && !isOpen) && 'showIconsDesk'} `}>

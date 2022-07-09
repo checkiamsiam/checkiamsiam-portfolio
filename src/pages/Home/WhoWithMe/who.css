@@ -1,0 +1,13 @@
+.effected-footer {
+  left: -100%;
+  transition: .4s ease-in-out;
+}
+.effected-border {
+transition: .4s ease-in-out;
+}
+.member-card:hover .effected-footer {
+  left: 0%;
+}
+.member-card:hover .effected-border {
+ border-color: #F27F1E;
+}
