@@ -7,6 +7,8 @@ import { MdContactMail } from "react-icons/md";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiFillProject } from "react-icons/ai";
 import './Header.css'
+import { motion } from "framer-motion"
+import { hamBurgerVariants } from '../../../hooks/animations';
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false)
@@ -39,7 +41,7 @@ const Header = () => {
 
             <div className='sm:hidden block'>
               <Hamburger toggled={isOpen} toggle={setOpen} color="#F27F1E " size={28} />
-              <div className={`h-screen bg-[#212121] fixed top-0 left-0 w-screen  transition duration-1000 ${isOpen ? ' showNav ' : ' hideNav '} -z-10 flex items-center p-5`} >
+              <div className={`h-screen bg-[#212121] fixed top-0 left-0 w-screen  transition duration-1000 } -z-10 flex items-center p-5 showNav ${(!isOpen) && 'hideNav'}`} >
                 <ul class=" w-full  text-2xl italic text-base-100">
                   <li className='hover:text-slate-100 header-options my-6 '><NavLink onClick={() => setOpen(!isOpen)} className='flex items-center gap-3 cursor-pointer' to='/'><AiFillHome />Home</NavLink></li>
                   <hr />

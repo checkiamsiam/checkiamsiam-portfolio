@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt } from 'react-icons/fa';
@@ -12,20 +12,34 @@ import { FaBootstrap } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 import { SiMongodb } from 'react-icons/si';
 import { SiNetlify } from 'react-icons/si';
+import { motion, useInView } from "framer-motion"
+import { serviceOneFrom, serviceOneTo, serviceOneTransition, serviceThreeFrom, serviceThreeTo, serviceTreeTransition, serviceTwoFrom, serviceTwoTo, serviceTwoTransition, titleFrom, titleTo, titleTransition } from '../../../hooks/animations';
 
 const MySkill = () => {
+  const refSection7 = useRef(null)
+  const isInViewSection = useInView(refSection7);
 
   return (
-    <div className='py-10 px-5 container mx-auto'>
+    <div className='py-10 px-5 min-h-screen container mx-auto'>
+      <motion.div 
+      initial={titleFrom}
+      animate={isInViewSection && titleTo}
+      transition={titleTransition}
+      >
       <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
         <div className='h-[2px] w-5 bg-primary'></div>
         My Skills
         <div className='h-[2px] w-5 bg-primary'></div>
       </div>
       <h1 className='text-base-100 text-center italic'>Here Is My Overview Of Coding Strategy</h1>
-      <div className='text-base-100 mt-10'>
+      </motion.div>
+      <div ref={refSection7} className='text-base-100 mt-10'>
         <div className='flex flex-wrap justify-center  gap-10'>
-          <div>
+          <motion.div
+          initial={serviceOneFrom}
+          animate={isInViewSection && serviceOneTo}
+          transition={serviceOneTransition} 
+          >
             <div className='w-full h-12 bg-primary rounded-3xl flex justify-center items-center text-2xl font-semibold'>Languages</div>
 
             <div>
@@ -43,9 +57,13 @@ const MySkill = () => {
               <div className='text-xl p-2 bg-neutral rounded-full text-[goldenrod] shadow-md shadow-[goldenrod]  hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><IoLogoJavascript className='text-4xl' /></div>
               <div className='text-xl p-2 bg-neutral rounded-full text-green-700 shadow-md shadow-green-700 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><IoLogoNodejs className='text-4xl' /></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+          initial={serviceTwoFrom}
+          animate={isInViewSection && serviceTwoTo}
+          transition={serviceTwoTransition}
+          >
             <div className='w-full h-12 bg-primary rounded-3xl flex justify-center items-center text-2xl font-semibold'>Libraries & Framework</div>
             <div>
               <Player
@@ -62,9 +80,13 @@ const MySkill = () => {
               <div className='text-xl p-2 bg-neutral rounded-full text-sky-400 shadow-md shadow-sky-400 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiTailwindcss className='text-4xl' /></div>
               <div className='text-xl p-2 bg-neutral rounded-full text-[#6D11EE] shadow-md shadow-[#6D11EE] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><FaBootstrap className='text-4xl' /></div>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+             initial={serviceThreeFrom}
+             animate={isInViewSection && serviceThreeTo}
+             transition={serviceTreeTransition} 
+          >
             <div className='w-full h-12 bg-primary rounded-3xl flex justify-center items-center text-2xl font-semibold'>Tools</div>
             <div>
               <Player
@@ -81,7 +103,7 @@ const MySkill = () => {
               <div className='text-xl p-2 bg-neutral rounded-full text-black shadow-md shadow-red-200 hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><BsGithub className='text-4xl' /></div>
               <div className='text-xl p-2 bg-neutral rounded-full text-[#31B0B6] shadow-md shadow-[#31B0B6] hover:-translate-y-2 hover:scale-110 transition duration-500 cursor-pointer'><SiNetlify className='text-4xl' /></div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
       </div>

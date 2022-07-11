@@ -1,22 +1,34 @@
-import React, { useContext, useState , memo } from 'react';
+import React, { useContext, useState , memo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './project.css'
 import { featuredProjectOne, featuredProjectTwo, featuredProjectThree } from '../../../FakeData/FeaturedProjects/FeaturedProjects';
 import { ActiveNavContext } from '../../../App';
+import { serviceOneFrom, serviceOneTo, serviceOneTransition, titleFrom, titleTo, titleTransition } from '../../../hooks/animations';
+import { useInView , motion } from 'framer-motion';
 
 const Projects = () => {
+  const refSection2 = useRef(null)
+  const isInViewSection = useInView(refSection2);
   const { setActiveCategory, setShowing, featured } = useContext(ActiveNavContext);
   const [visible1, setVisible1] = useState(false)
   const [visible2, setVisible2] = useState(false)
   const [visible3, setVisible3] = useState(false)
   return (
     <div className='py-10 container mx-auto px-5 '>
-      <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-2'>
+      <motion.div
+        initial={titleFrom}
+        animate={isInViewSection && titleTo}
+        transition={titleTransition}
+         className='text-accent text-4xl title-font text-center my-10 flex justify-center items-center gap-2'>
         <div className='h-[2px] w-4 bg-primary'></div>
         Featured Projects
         <div className='h-[2px] w-4 bg-primary'></div>
-      </div>
-      <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'>
+      </motion.div>
+      <motion.div 
+          initial={serviceOneFrom}
+          animate={isInViewSection && serviceOneTo}
+          transition={serviceOneTransition}
+           ref={refSection2} className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'>
         <div class="p-2 rounded-xl  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
           <figure onMouseMove={() => setVisible1(true)} onMouseOut={() => setVisible1(false)} class="mx-3 mt-3 cursor-pointer relative">
             <img src={featuredProjectOne.img[0]} alt="Website-overview" class="rounded-xl" />
@@ -71,7 +83,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className='flex justify-center'>
         <Link onClick={() => {
           setActiveCategory('feature')

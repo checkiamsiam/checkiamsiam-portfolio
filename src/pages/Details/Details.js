@@ -20,7 +20,7 @@ const ProjectDetail = () => {
     dots: true,
     arrows: false,
     slidesToShow: 1,
-    slidesToScrool: 1,
+    slidesToScroll: 1,
     speed: 500,
     centerMode: true,
     centerPadding: '300px',

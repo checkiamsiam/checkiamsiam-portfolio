@@ -2,9 +2,12 @@ import React, { useRef , memo } from 'react';
 import emailjs from '@emailjs/browser';
 import { BiSend } from "react-icons/bi";
 import Swal from 'sweetalert2';
+import { useInView , motion } from 'framer-motion';
+import { contactFormFrom, contactFormTo, contactFormTransition } from '../../../hooks/animations';
 
 const ContactForm = () => {
   const form = useRef();
+  const isInViewSection = useInView(form);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,7 +25,11 @@ const ContactForm = () => {
       });
   };
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <motion.form
+     initial={contactFormFrom}
+    animate={isInViewSection && contactFormTo}
+    transition={contactFormTransition} 
+    ref={form} onSubmit={sendEmail}>
       <div className='flex md:flex-row flex-col gap-5 mb-5'>
         <input name='name' type="text" placeholder="YOUR NAME" class="input cursor-text bg-neutral w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
         <input name='email' type="text" placeholder="EMAIL" class="input cursor-text bg-neutral  w-full  focus:outline-primary focus:outline-1 rounded-full text-base-100 " />
@@ -37,7 +44,7 @@ const ContactForm = () => {
           <BiSend class="btn-icon" />
         </button>
       </div>
-    </form>
+    </motion.form>
   );
 };
 
