@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './cbanner.css'
 import { Player } from '@lottiefiles/react-lottie-player';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaLinkedin } from 'react-icons/fa';
+import { motion, useInView } from "framer-motion"
+import { serviceOneFrom, serviceOneTo, serviceOneTransition, serviceThreeFrom, serviceThreeTo, serviceTreeTransition, serviceTwoFrom, serviceTwoTo, serviceTwoTransition, topTitleFrom, topTitleTo, topTitleTransition } from '../../../hooks/animations';
 
 const ContactBanner = () => {
+  const refSection = useRef(null)
+  const isInViewSection = useInView(refSection);
   return (
     <div className='pt-24 pb-5 md:px-10 px-5'>
-      <h1 className=' text-center mb-10 '><span className='text-accent text-4xl title-font Contact-title relative z-30'>Get In Touch</span></h1>
-      <p className='md:w-3/4 px-5 mx-auto text-base-100 text-center font-semibold text-lg'>Are you looking for me? need me? contact with me? always i'm ready for you. Here is some way to contact with me. Check it out</p>
-      <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10 '>
+      <motion.div
+      initial={topTitleFrom}
+      animate={topTitleTo}
+      transition={topTitleTransition}
+      >
+        <h1 className=' text-center mb-10 '><span className='text-accent text-4xl title-font Contact-title relative z-30'>Get In Touch</span></h1>
+        <p
+          className='md:w-3/4 px-5 mx-auto text-base-100 text-center font-semibold text-lg'>Are you looking for me? need me? contact with me? always i'm ready for you. Here is some way to contact with me. Check it out</p>
+      </motion.div>
+      <div ref={refSection} className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10 '>
 
-        <div class="rounded-lg bg-neutral text-neutral-content">
+        <motion.div
+          initial={serviceOneFrom}
+          animate={isInViewSection && serviceOneTo}
+          transition={serviceOneTransition}
+          class="rounded-lg bg-neutral text-neutral-content">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player
@@ -27,8 +42,12 @@ const ContactBanner = () => {
             <p className='font-extrabold text-3xl'>Call Me</p>
             <p class="card-actions justify-end font-semibold ">+8801910072661 </p>
           </div>
-        </div>
-        <div class="rounded-lg bg-neutral text-neutral-content">
+        </motion.div>
+        <motion.div
+          initial={serviceTwoFrom}
+          animate={isInViewSection && serviceTwoTo}
+          transition={serviceTwoTransition}
+          class="rounded-lg bg-neutral text-neutral-content">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player
@@ -42,8 +61,12 @@ const ContactBanner = () => {
             <p className='font-extrabold text-3xl'>E-Mail Me</p>
             <p class="card-actions justify-end font-semibold ">issiam02415@gmail.com</p>
           </div>
-        </div>
-        <div class="rounded-lg bg-neutral text-neutral-content ">
+        </motion.div>
+        <motion.div
+          initial={serviceThreeFrom}
+          animate={isInViewSection && serviceThreeTo}
+          transition={serviceTreeTransition}
+          class="rounded-lg bg-neutral text-neutral-content ">
           <div class="card-body items-center text-center">
             <h2 class="card-title">
               <Player
@@ -57,7 +80,7 @@ const ContactBanner = () => {
             <p className='font-extrabold text-3xl'>Adress</p>
             <p class="card-actions justify-end font-semibold ">Jatrabari, Dhaka</p>
           </div>
-        </div>
+        </motion.div>
 
 
       </div>

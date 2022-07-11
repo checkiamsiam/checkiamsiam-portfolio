@@ -11,7 +11,8 @@ const PersonalInfo = () => {
       <motion.div
         initial={titleFrom}
         animate={isInViewSection && titleTo}
-        transition={titleTransition} className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-1'>
+        transition={titleTransition}
+         className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-1'>
         <div className='h-[2px] w-4 bg-primary'></div>
         PERSONAL INFO <TiInfoLargeOutline className='text-sm mb-7' />
         <div className='h-[2px] w-4 bg-primary'></div>

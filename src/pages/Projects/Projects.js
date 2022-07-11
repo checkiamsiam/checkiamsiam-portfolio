@@ -1,11 +1,15 @@
-import React, { useContext, useState, memo } from 'react';
+import React, { useContext, useState, memo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ActiveNavContext } from '../../App';
 import { Helmet } from "react-helmet-async";
+import { motion, useInView } from "framer-motion"
 import './project.css'
 import '../Home/Projects/project.css'
+import { serviceOneFrom, serviceOneTo, serviceOneTransition, topTitleFrom, topTitleTo, topTitleTransition } from '../../hooks/animations';
 
 const Projects = () => {
+  const refCard = useRef(null)
+  const isInViewSection = useInView(refCard);
   const { activeCategory, setActiveCategory, projects, showing, setShowing, featured } = useContext(ActiveNavContext);
   const [showAll, setShowAll] = useState(false)
   const org = projects.filter(project => project.category === 'org')
@@ -66,9 +70,19 @@ const Projects = () => {
       <Helmet>
         <title>Projects - Sheikh Shahariar Siam</title>
       </Helmet>
-      <div className='container  mx-auto text-base-100 px-5 '>
+      <motion.div
+        initial={topTitleFrom}
+        animate={topTitleTo}
+        transition={topTitleTransition}
+      >
         <h1 className=' text-center sm:mb-10 mb-5 '><span className='text-accent text-4xl title-font project-title relative z-30'>My Projects</span></h1>
         <p className='text-center italic text-primary'>All Of My Projects Showcased here</p>
+      </motion.div>
+      <motion.div
+        initial={serviceOneFrom}
+        animate={serviceOneTo}
+        transition={serviceOneTransition}
+        className='container  mx-auto text-base-100 px-5 '>
         <div className='flex justify-center sm:mt-10 mt-5'>
           <div>
             <button onClick={handleAllProjectNav} class={`p-2 hover:text-primary transition duration-400 md:text-xl text-xs uppercase text-base-100 border-b-2  ${activeCategory === 'all' ? 'border-primary ' : 'border-neutral'}`}>All</button>
@@ -81,7 +95,12 @@ const Projects = () => {
         {showing.length !== 0 ? <div>
           {!showAll ? <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
             {showing.slice(0, 6).map((project, index) =>
-              <div key={index} >
+              <motion.div
+                initial={serviceOneFrom}
+                animate={serviceOneTo}
+                transition={serviceOneTransition}
+          
+                key={index} >
                 <div class="p-2 rounded-2xl bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                   <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                     <Link to={`${project.detailsRoute}`}>
@@ -99,12 +118,16 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )}
           </div> :
             <div className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10'>
               {showing.map((project, index) =>
-                <div key={index}>
+                <motion.div
+                  initial={serviceOneFrom}
+                  animate={serviceOneTo}
+                  transition={serviceOneTransition}
+                  key={index}>
                   <div class="p-2 rounded-xl  bg-[rgba(247,244,244,0.15)] shadow-md hover:shadow-primary transition duration-300">
                     <figure class="mx-3 mt-3 cursor-pointer bg-secondary rounded-xl">
                       <Link to={`${project.detailsRoute}`}>
@@ -122,7 +145,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
             </div>}
         </div> :
@@ -130,7 +153,7 @@ const Projects = () => {
           <h1 className='text-error text-6xl text-center py-10'>Empty</h1>
 
         }
-      </div>
+      </motion.div>
       {(!showAll && showing.length !== 0) ? <div className='flex justify-center'>
         <button onClick={() => {
           setShowAll(!showAll)
