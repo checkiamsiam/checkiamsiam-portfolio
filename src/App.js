@@ -1,5 +1,6 @@
 import React, { createContext, useState, Suspense, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import { projectFour, projectOne, projectThree, projectTwo } from './FakeData/All Project/AllProject';
 import { featuredProjectOne, featuredProjectThree, featuredProjectTwo } from './FakeData/FeaturedProjects/FeaturedProjects';
@@ -18,6 +19,7 @@ const ScrollTopOnRouteChange = lazy(() => import('./pages/Shared&minifier/Scrool
 
 const ActiveNavContext = createContext();
 function App() {
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState('all');
   const projects = [featuredProjectThree, featuredProjectTwo, featuredProjectOne, projectOne, projectTwo, projectThree, projectFour];
   const [showing, setShowing] = useState(projects)
@@ -27,15 +29,17 @@ function App() {
       <ActiveNavContext.Provider value={{ activeCategory, setActiveCategory, projects, showing, setShowing, featured: featuredProject }}>
         <Header></Header>
         <Suspense fallback={<Loader />}>
-          <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/about' element={<AboutMe />}></Route>
-            <Route path='/projects' element={<Projects />}></Route>
-            <Route path='/projects/:route' element={<ProjectDetail />}></Route>
-            <Route path='/blogs' element={<Blogs />}></Route>
-            <Route path='/contact' element={<Contact />}></Route>
-            <Route path='*' element={<NotFound />}></Route>
-          </Routes>
+          <AnimatePresence exitBeforeEnter>
+            <Routes location={location} key={location.key}>
+              <Route path='/' element={<Home></Home>}></Route>
+              <Route path='/about' element={<AboutMe />}></Route>
+              <Route path='/projects' element={<Projects />}></Route>
+              <Route path='/projects/:route' element={<ProjectDetail />}></Route>
+              <Route path='/blogs' element={<Blogs />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+              <Route path='*' element={<NotFound />}></Route>
+            </Routes>
+          </AnimatePresence>
         </Suspense>
         <Footer />
         <ScrollTopOnRouteChange />

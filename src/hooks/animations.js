@@ -134,3 +134,18 @@ export const animationBallTransition = {
   yoyo: Infinity ,
 }
 
+// router animation
+
+export const routerAnimationFrom = {
+  opacity: 0 
+}
+export const routerAnimationTo = {
+  opacity: 1 ,
+}
+export const routerAnimationExit = {
+  opacity: 0 
+}
+export const routerAnimationTransition = {
+  duration: 0.5 ,
+  ease: 'easeInOut'
+}

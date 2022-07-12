@@ -5,11 +5,9 @@ import { Helmet } from "react-helmet-async";
 import { motion, useInView } from "framer-motion"
 import './project.css'
 import '../Home/Projects/project.css'
-import { serviceOneFrom, serviceOneTo, serviceOneTransition, topTitleFrom, topTitleTo, topTitleTransition } from '../../hooks/animations';
+import { routerAnimationExit, routerAnimationFrom, routerAnimationTo, routerAnimationTransition, serviceOneFrom, serviceOneTo, serviceOneTransition, topTitleFrom, topTitleTo, topTitleTransition } from '../../hooks/animations';
 
 const Projects = () => {
-  const refCard = useRef(null)
-  const isInViewSection = useInView(refCard);
   const { activeCategory, setActiveCategory, projects, showing, setShowing, featured } = useContext(ActiveNavContext);
   const [showAll, setShowAll] = useState(false)
   const org = projects.filter(project => project.category === 'org')
@@ -66,7 +64,12 @@ const Projects = () => {
   }
 
   return (
-    <div className='pt-24 pb-5 min-h-screen'>
+    <motion.div
+    initial={routerAnimationFrom}
+    animate={routerAnimationTo}
+    transition={routerAnimationTransition}
+    exit={routerAnimationExit}
+     className='pt-24 pb-5 min-h-screen'>
       <Helmet>
         <title>Projects - Sheikh Shahariar Siam</title>
       </Helmet>
@@ -163,7 +166,7 @@ const Projects = () => {
           <button onClick={goNext} className='custom-btn m-5 btn btn-ghost'>Next</button>
         </div>
       }
-    </div>
+    </motion.div>
   );
 };
 
