@@ -22,6 +22,7 @@ const ContactSection = () => {
             initial={titleFrom}
             animate={isInViewSection && titleTo}
             transition={titleTransition}
+            ref={refSection4}
             className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
             <div className='h-[2px] w-5 bg-primary'></div>
             Feel Free To Me
@@ -41,7 +42,7 @@ const ContactSection = () => {
           repeat={Infinity}
         />
         </h1>
-        <div ref={refSection4} className='xl:flex justify-between md:px-14 '>
+        <div  className='xl:flex justify-between md:px-14 '>
           <motion.div
             initial={contactBodyFrom}
             animate={isInViewSection && contactBodyTo}

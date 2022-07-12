@@ -15,6 +15,7 @@ const WhoWithMe = () => {
         initial={titleFrom}
         animate={isInViewSection && titleTo}
         transition={titleTransition}
+        ref={refSection3}
         >
       <div className='text-accent text-4xl title-font text-center mt-5 flex justify-center items-center gap-3'>
         <div className='h-[2px] w-5 bg-primary'></div>
@@ -24,7 +25,7 @@ const WhoWithMe = () => {
       <h1 className='text-center text-base-100 mb-5'>( My Team )</h1>
       </motion.div>
 
-      <div ref={refSection3} className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-between '>
+      <div  className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-between '>
         <motion.div
           initial={serviceOneFrom}
           animate={isInViewSection && serviceOneTo}
