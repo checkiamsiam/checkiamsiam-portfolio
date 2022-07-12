@@ -12,7 +12,6 @@ const PersonalInfo = () => {
         initial={titleFrom}
         animate={isInViewSection && titleTo}
         transition={titleTransition}
-        ref={refSection6}
          className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-1'>
         <div className='h-[2px] w-4 bg-primary'></div>
         PERSONAL INFO <TiInfoLargeOutline className='text-sm mb-7' />
@@ -22,7 +21,7 @@ const PersonalInfo = () => {
         initial={serviceOneFrom}
         animate={isInViewSection && serviceOneTo}
         transition={serviceOneTransition}
-         className='lg:my-28'>
+        ref={refSection6} className='lg:my-28'>
         <div className='lg:flex gap-5 justify-center items-center'>
 
           <div className='flex justify-center items-center lg:w-1/2'>

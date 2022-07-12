@@ -25,7 +25,6 @@ const MySkill = () => {
       initial={titleFrom}
       animate={isInViewSection && titleTo}
       transition={titleTransition}
-      ref={refSection7}
       >
       <div className='text-accent text-4xl title-font text-center my-5 flex justify-center items-center gap-3'>
         <div className='h-[2px] w-5 bg-primary'></div>
@@ -34,7 +33,7 @@ const MySkill = () => {
       </div>
       <h1 className='text-base-100 text-center italic'>Here Is My Overview Of Coding Strategy</h1>
       </motion.div>
-      <div  className='text-base-100 mt-10'>
+      <div ref={refSection7} className='text-base-100 mt-10'>
         <div className='flex flex-wrap justify-center  gap-10'>
           <motion.div
           initial={serviceOneFrom}

@@ -17,14 +17,13 @@ const Services = () => {
         initial={titleFrom}
         animate={isInViewSection && titleTo}
         transition={titleTransition}
-        ref={refSection} 
         className='text-accent text-4xl title-font text-center my-10 flex justify-center items-center gap-3'>
         <div className='h-[2px] w-5 bg-primary'></div>
         My Services
         <div className='h-[2px] w-5 bg-primary'></div>
       </motion.div>
 
-      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-between'>
+      <div ref={refSection} className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 justify-between'>
         <motion.div
           initial={serviceOneFrom}
           animate={isInViewSection && serviceOneTo}

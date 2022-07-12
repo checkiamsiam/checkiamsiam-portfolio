@@ -17,13 +17,12 @@ const ContactBanner = () => {
       initial={topTitleFrom}
       animate={topTitleTo}
       transition={topTitleTransition}
-      ref={refSection}
       >
         <h1 className=' text-center mb-10 '><span className='text-accent text-4xl title-font Contact-title relative z-30'>Get In Touch</span></h1>
         <p
           className='md:w-3/4 px-5 mx-auto text-base-100 text-center font-semibold text-lg'>Are you looking for me? need me? contact with me? always i'm ready for you. Here is some way to contact with me. Check it out</p>
       </motion.div>
-      <div  className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10 '>
+      <div ref={refSection} className='grid gap-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mt-10 '>
 
         <motion.div
           initial={serviceOneFrom}
